@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/site.css?v=dbecfb79">
+<link rel="stylesheet" href="assets/css/site.css?v=074690be">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -110,6 +110,28 @@
     <div class="horizons"><article class="horizon horizon--core"><span style="align-self:flex-start" class="stamp stamp--real">Real · Research prototype</span><h2 class="horizon__name">Site<br>Analyzer</h2><p class="muted">The working research environment: site, massing, sun and shade, wind preview and comfort in one place.</p><ul><li>Python &amp; Streamlit implementation</li><li>2D / 3D environments in active development</li><li>Analysis &amp; evidence workflows</li></ul></article><article class="horizon horizon--concept"><span style="align-self:flex-start" class="stamp stamp--concept">Concept · Not available</span><h2 class="horizon__name">RSA<br>Studio</h2><p class="muted">A proposed comparison environment linking environmental change to the design choices behind it.</p><ul><li>Alternative massing &amp; A/B scenarios</li><li>Floor- and time-scale comparison</li><li>Report-ready summaries (concept)</li></ul></article><article class="horizon horizon--concept"><span style="align-self:flex-start" class="stamp stamp--planned">Planned · Not deployed</span><h2 class="horizon__name">RSA<br>Intelligence</h2><p class="muted">Planned research into whether AI (e.g. the Claude API) can explain results in terms people can evaluate and challenge.</p><ul><li>Explanations tied to source results</li><li>Human review &amp; traceable assumptions</li><li>Explicit uncertainty and method limits</li></ul></article></div>
   </div>
 </section>
+
+<section class="section" style="padding-top:0" id="intelligence">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">02.1</span><span class="sheet-head__label">RSA Intelligence · How we plan to use Claude</span><span class="sheet-head__aside">Planned · not deployed</span></div>
+    <div class="grid" style="row-gap:24px;align-items:end;margin-bottom:clamp(36px,4vw,56px)">
+      <h2 class="span-6 display d-l">Explain the evidence.<br><span style="color:var(--mute-2)">Never invent it.</span></h2>
+      <p class="span-6 body muted" style="max-width:none">Residential Site Analyzer already computes floor-, time- and scheme-level results. What people struggle with is reading them. RSA Intelligence is planned research into using Claude (via the Claude API) to explain those results in plain language—tied to their sources, with the limits stated, and reviewed by a person.</p>
+    </div>
+    <ol class="aiflow"><li class="aiflow__step reveal"><span class="loop__n">01</span><span class="aiflow__t">Inputs</span><p>Computed results from Site Analyzer: floor × time × scheme values, the parameters used, data sources and known limits.</p></li><li class="aiflow__step reveal"><span class="loop__n">02</span><span class="aiflow__t">Claude</span><p>Writes a short explanation: what differs between schemes, on which floors and at which hours, and which assumptions matter most.</p></li><li class="aiflow__step reveal"><span class="loop__n">03</span><span class="aiflow__t">Checks</span><p>Every statement must point to a source result. Claims without a source are dropped; uncertainty and method limits are stated.</p></li><li class="aiflow__step reveal"><span class="loop__n">04</span><span class="aiflow__t">Human review</span><p>A designer or researcher reviews and edits the text before it goes into a report or a design discussion.</p></li></ol>
+    <div class="grid" style="row-gap:40px;margin-top:clamp(48px,6vw,88px);align-items:start">
+      <div class="span-7 stack" style="grid-template-columns:repeat(2,minmax(0,1fr))"><div><h3>Scheme summaries</h3><p>A vs B differences in sun, shade and outdoor comfort, by floor and hour.</p></div><div><h3>Assumption prompts</h3><p>Which inputs (date, height, climate source) most affect a result, and what to check next.</p></div><div><h3>Report drafts</h3><p>Plain-language sections for environmental reports, with traceable references.</p></div><div><h3>Question answering</h3><p>Answer design-team questions only from the analysed case, with sources.</p></div></div>
+      <div class="span-4 start-9"><p class="mono muted" style="margin-bottom:10px">Ground rules</p><ul class="ticks"><li>Claude explains results; it never produces or alters calculation results.</li><li>Every claim links to a source value, parameter or method note.</li><li>Uncertainty, model limits and unvalidated modules are stated in the text.</li><li>A person reviews before anything is shared.</li><li>It does not replace physical simulation or professional judgement.</li></ul></div>
+    </div>
+    <figure class="aiex reveal">
+      <figcaption class="aiex__cap"><span class="mono">What an explanation could look like</span><span class="stamp stamp--concept">Concept illustration · not a live Claude response</span></figcaption>
+      <p class="aiex__q">Why does Scheme B get less direct sun on the 3rd floor in winter afternoons?</p>
+      <p class="aiex__a">In this [example] case, the neighbouring block to the south-west is taller than Scheme B’s 3rd-floor façade between [14:00] and [16:00], so the façade is in shadow for most of that window [→ shadow result, 3F, 21 Dec]. Scheme A sits [2 m] further north and avoids part of that shadow. This comparison uses a clear-sky assumption and the recorded neighbour heights [→ input sources]; real cloud cover would reduce both.</p>
+      <p class="mono mono--sm muted">Bracketed values are placeholders to show the format. Arrows mark the source each statement would cite.</p>
+    </figure>
+    <p class="body muted" style="margin-top:28px;max-width:46em">Whether these explanations actually help is a research question. It will be tested in the planned user study: same data, same task, with and without explanations—comparing accuracy, time and quality of reasoning. <a class="link" href="research.html">Research &amp; validation <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="sheet-head"><span class="sheet-head__no">03</span><span class="sheet-head__label">Connected by design, transparent by method</span></div>
@@ -152,6 +174,6 @@
   </div>
 </footer>
 
-<script src="assets/js/site.js?v=dbecfb79" defer></script>
+<script src="assets/js/site.js?v=074690be" defer></script>
 </body>
 </html>

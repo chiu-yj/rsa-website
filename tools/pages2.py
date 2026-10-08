@@ -66,6 +66,26 @@ PL = {
   stack=[('Python / Streamlit', 'Experimental interface and analysis orchestration.'), ('Solar geometry', 'Time-aware shadow research with historical reference comparison.'),
          ('Wind exploration', 'Directional preview. Not CFD-based pressure or pedestrian-safety evidence.'), ('UTCI orientation', 'Depends on climate inputs, radiation, geometry and modelling assumptions.')],
   band='Research preview, not release certification. Screenshots do not prove validated accuracy, production readiness or commercial availability. Site Analyzer is a decision-support tool for early design; it does not replace Radiance, CFD or EnergyPlus.',
+  ai=dict(
+   head=('02.1', 'RSA Intelligence · How we plan to use Claude', 'Planned · not deployed'),
+   h='Explain the evidence.<br><span style="color:var(--mute-2)">Never invent it.</span>',
+   intro='Residential Site Analyzer already computes floor-, time- and scheme-level results. What people struggle with is reading them. RSA Intelligence is planned research into using Claude (via the Claude API) to explain those results in plain language—tied to their sources, with the limits stated, and reviewed by a person.',
+   flow=[('01', 'Inputs', 'Computed results from Site Analyzer: floor × time × scheme values, the parameters used, data sources and known limits.'),
+         ('02', 'Claude', 'Writes a short explanation: what differs between schemes, on which floors and at which hours, and which assumptions matter most.'),
+         ('03', 'Checks', 'Every statement must point to a source result. Claims without a source are dropped; uncertainty and method limits are stated.'),
+         ('04', 'Human review', 'A designer or researcher reviews and edits the text before it goes into a report or a design discussion.')],
+   uses=[('Scheme summaries', 'A vs B differences in sun, shade and outdoor comfort, by floor and hour.'),
+         ('Assumption prompts', 'Which inputs (date, height, climate source) most affect a result, and what to check next.'),
+         ('Report drafts', 'Plain-language sections for environmental reports, with traceable references.'),
+         ('Question answering', 'Answer design-team questions only from the analysed case, with sources.')],
+   rules_t='Ground rules',
+   rules=['Claude explains results; it never produces or alters calculation results.', 'Every claim links to a source value, parameter or method note.', 'Uncertainty, model limits and unvalidated modules are stated in the text.', 'A person reviews before anything is shared.', 'It does not replace physical simulation or professional judgement.'],
+   ex_t='What an explanation could look like', ex_stamp='Concept illustration · not a live Claude response',
+   ex_q='Why does Scheme B get less direct sun on the 3rd floor in winter afternoons?',
+   ex_a='In this [example] case, the neighbouring block to the south-west is taller than Scheme B’s 3rd-floor façade between [14:00] and [16:00], so the façade is in shadow for most of that window [→ shadow result, 3F, 21 Dec]. Scheme A sits [2 m] further north and avoids part of that shadow. This comparison uses a clear-sky assumption and the recorded neighbour heights [→ input sources]; real cloud cover would reduce both.',
+   ex_note='Bracketed values are placeholders to show the format. Arrows mark the source each statement would cite.',
+   study='Whether these explanations actually help is a research question. It will be tested in the planned user study: same data, same task, with and without explanations—comparing accuracy, time and quality of reasoning.',
+   study_link='Research &amp; validation'),
   b1='How we validate', b2='Get in touch'),
  'zh': dict(
   title='技術平台 — Residential Site Analyzer · RSA 見築科技',
@@ -99,8 +119,56 @@ PL = {
   stack=[('Python／Streamlit', '實驗性介面與分析流程整合。'), ('太陽幾何', '時間條件下的陰影研究，含歷史參考比對。'),
          ('風環境探索', '風向預覽，非 CFD 風壓或行人安全證據。'), ('UTCI 導向', '結果取決於氣象輸入、輻射、幾何與模型假設。')],
   band='研究預覽，非正式版本認證。截圖不代表已驗證的精度、正式可用或商業上市。Site Analyzer 是設計前期的決策支援工具，不取代 Radiance、CFD 或 EnergyPlus。',
+  ai=dict(
+   head=('02.1', 'RSA Intelligence · 我們計畫如何使用 Claude', '規劃中 · 尚未部署'),
+   h='解釋證據，<br><span style="color:var(--mute-2)">而不是捏造證據。</span>',
+   intro='Residential Site Analyzer 已能計算樓層、時間與方案層級的結果；真正困難的是「讀懂」這些結果。RSA Intelligence 是規劃中的研究：透過 Claude API，以白話解釋分析結果——每句話都對應來源、說明限制，並經過人工審查。',
+   flow=[('01', '輸入', 'Site Analyzer 的計算結果：樓層 × 時間 × 方案數值、使用的參數、資料來源與已知限制。'),
+         ('02', 'Claude', '寫出簡短說明：方案之間哪裡不同、在哪些樓層與時段，以及哪些假設影響最大。'),
+         ('03', '檢查', '每一句說明都必須指向來源結果；沒有來源的說法會被移除，並註明不確定性與方法限制。'),
+         ('04', '人工審查', '由設計者或研究者審閱、修改後，才放進報告或設計討論。')],
+   uses=[('方案摘要', 'A／B 方案在日照、遮蔭與戶外熱舒適上的差異，依樓層與時段整理。'),
+         ('假設提示', '哪些輸入（日期、高度、氣象來源）最影響結果，下一步該檢查什麼。'),
+         ('報告草稿', '環境報告中的白話段落，附可追溯的引用。'),
+         ('問答', '只根據已分析的案例回答設計團隊的問題，並附來源。')],
+   rules_t='基本原則',
+   rules=['Claude 只解釋結果，不產生也不修改計算結果。', '每個說法都連到來源數值、參數或方法說明。', '文字中明確寫出不確定性、模型限制與未驗證模組。', '任何內容分享前都經人工審查。', '不取代物理模擬，也不取代專業判斷。'],
+   ex_t='說明可能長這樣', ex_stamp='概念示意 · 非 Claude 實際回應',
+   ex_q='為什麼方案 B 的 3 樓在冬季下午直射日照比較少？',
+   ex_a='在這個〔示例〕案例中，西南側鄰棟在〔14:00〕到〔16:00〕之間高於方案 B 的 3 樓立面，因此該時段大部分時間立面位於陰影中〔→ 陰影結果，3F，12/21〕。方案 A 往北退縮〔2 m〕，避開了部分陰影。此比較採用晴空假設與已記錄的鄰棟高度〔→ 輸入來源〕；實際雲量會同時降低兩個方案的日照。',
+   ex_note='括號內為示意用的佔位數值；箭頭標示每句話將引用的來源。',
+   study='這些說明是否真的有幫助，本身就是研究問題，將在規劃中的使用者研究中檢驗：相同資料與任務，比較有無說明時的判讀正確率、任務時間與決策理由品質。',
+   study_link='研究與驗證'),
   b1='我們如何驗證', b2='聯絡我們'),
 }
+
+
+def ai_section(a):
+    flow = ''.join(f'<li class="aiflow__step reveal"><span class="loop__n">{n}</span><span class="aiflow__t">{t}</span><p>{d}</p></li>' for n, t, d in a['flow'])
+    uses = ''.join(f'<div><h3>{t}</h3><p>{d}</p></div>' for t, d in a['uses'])
+    rules = ''.join(f'<li>{r}</li>' for r in a['rules'])
+    return f'''
+<section class="section" style="padding-top:0" id="intelligence">
+  <div class="wrap">
+    {sheet_head(*a['head'])}
+    <div class="grid" style="row-gap:24px;align-items:end;margin-bottom:clamp(36px,4vw,56px)">
+      <h2 class="span-6 display d-l">{a['h']}</h2>
+      <p class="span-6 body muted" style="max-width:none">{a['intro']}</p>
+    </div>
+    <ol class="aiflow">{flow}</ol>
+    <div class="grid" style="row-gap:40px;margin-top:clamp(48px,6vw,88px);align-items:start">
+      <div class="span-7 stack" style="grid-template-columns:repeat(2,minmax(0,1fr))">{uses}</div>
+      <div class="span-4 start-9"><p class="mono muted" style="margin-bottom:10px">{a['rules_t']}</p><ul class="ticks">{rules}</ul></div>
+    </div>
+    <figure class="aiex reveal">
+      <figcaption class="aiex__cap"><span class="mono">{a['ex_t']}</span>{stamp('concept', a['ex_stamp'])}</figcaption>
+      <p class="aiex__q">{a['ex_q']}</p>
+      <p class="aiex__a">{a['ex_a']}</p>
+      <p class="mono mono--sm muted">{a['ex_note']}</p>
+    </figure>
+    <p class="body muted" style="margin-top:28px;max-width:46em">{a['study']} <a class="link" href="research.html">{a['study_link']} <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>'''
 
 
 def platform(lang):
@@ -144,6 +212,7 @@ def platform(lang):
     <div class="horizons">{hz}</div>
   </div>
 </section>
+{ai_section(d['ai'])}
 <section class="section" style="padding-top:0">
   <div class="wrap">
     {sheet_head(*d['s3'])}
