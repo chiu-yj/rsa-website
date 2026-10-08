@@ -190,3 +190,47 @@ body.modal-open{overflow:hidden}
 @media(max-width:840px){.desktop-nav,.header-inner>.nav-cta{display:none}.menu-toggle{display:block}.header-inner{height:68px}.mobile-nav{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line);padding:12px 32px 23px;background:#f9faf6}.mobile-nav a{padding:12px 0;border-bottom:1px solid #e3e8df;font-size:14px;font-weight:650}.hero-grid,.showcase,.split{grid-template-columns:1fr}.hero{padding-top:62px}.hero-photo-shell{margin:10px 28px 0 0}.three-grid,.metric-grid{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.process article:nth-child(2){border-right:0}.process article:nth-child(-n+2){border-bottom:1px solid #d8ded6}.footer-top{grid-template-columns:1fr 1fr}.showcase.reverse .showcase-copy,.showcase.reverse .showcase-image{order:unset}.contact-panel{grid-template-columns:1fr}.contact-panel .btn-row{justify-content:flex-start}}
 @media(max-width:600px){.container{width:min(calc(100% - 36px),var(--max))}.concept-banner{font-size:10px}.site-header .logo-word small{font-size:8px}.logo-mark{height:35px;width:38px}.hero h1{font-size:clamp(51px,12vw,74px)}.hero .lead{font-size:16px}.hero-photo-shell{padding:18px 0 18px 16px;margin-right:12px}.hero-window{transform:translateX(10px)}.window-top b{font-size:8px}.signal-strip,.three-grid,.metric-grid,.feature-list,.gallery-grid,.horizon{grid-template-columns:1fr}.signal{border-right:0;border-bottom:1px solid var(--line);padding:17px 0!important}.signal:last-child{border-bottom:0}.section-header{display:block}.section{padding:70px 0}.card-pad{padding:23px}.gallery-item.featured{grid-column:span 1}.gallery-item.featured img{aspect-ratio:16/9}.process{grid-template-columns:1fr}.process article{border-right:0;border-bottom:1px solid #d8ded6}.process article:last-child{border-bottom:0}.process article:nth-child(2){border-bottom:1px solid #d8ded6}.process h3{margin-top:22px}.contact-panel{padding:37px 26px}.footer-top{grid-template-columns:1fr 1fr}.footer-brand{grid-column:span 2}.site-footer{padding-top:53px}.page-hero{padding:65px 0 45px}.page-hero h1{font-size:clamp(49px,11vw,66px)}.lightbox{padding:15px}.lightbox-close{right:0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+
+/* RSA monochrome visual alignment / editorial v5 — companion pages
+   Graphite, cool grey, white and a restrained orange accent. */
+:root{
+ --ink:#161616;--muted:#66676a;--paper:#ffffff;--white:#ffffff;
+ --line:#e4e4e6;--orange:#d76f3c;--orange-dark:#ab532c;
+ --forest:#191a1c;--soft:#f5f5f5;--radius:8px;
+}
+body{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","PingFang TC","Noto Sans TC","Helvetica Neue",Arial,sans-serif;background:#fff;color:var(--ink)}
+h1,h2,h3,h4{font-family:inherit;font-style:normal}
+.serif{font-family:inherit;font-style:normal;font-weight:inherit;letter-spacing:inherit;color:inherit}
+.section{background:#fff}
+.section.alt{background:#f5f5f5}
+.section.dark,.site-footer,.contact-panel,.brandstatement{background:#191a1c}
+.quote-band,.suite-wrap,.engage-area{background:#f5f5f5}
+.site-header{background:rgba(255,255,255,.96);border-color:#e9e9ea}
+.site-header .nav-cta{background:#fff}
+.logo-mark{background:#191a1c}
+.logo-word small{color:#77787d}
+.desktop-nav a{color:#55565b}
+.desktop-nav a:hover{color:#b45a2d}
+h1,h2,h3{letter-spacing:-.05em}
+.lead,.copy,.card p,.showcase-copy p{color:#696a6d}
+.card,.feature,.gallery-item,.horizon article,.metric,.process,.gallery-item,.suite-card,.engage-card{
+ box-shadow:none;border-color:#e5e5e7;border-radius:8px
+}
+.card-visual,.showcase-image,.hero-photo-shell{background:#f0f0f0}
+.card-visual.future{background:#28292b}
+.card-visual.future.intelligence{background:#3a3b3d}
+.card-visual.future:before{border-color:#8c8d90}
+.card-visual.future:after{color:#d5d5d7}
+.pill{background:#f2f2f3;color:#55565b}
+.pill.planned{background:#f8eee8;color:#ad633c}
+.btn{background:#1b1c1e;border-color:#1b1c1e}
+.btn:hover{background:#333437;border-color:#333437}
+.btn.secondary{border-color:#c6c6c9}
+.btn.secondary:hover{background:#f5f5f5}
+.eyebrow{color:#b35d33}
+.site-footer a:hover{color:#fff}
+.footer-bottom{border-color:#454547}
+@media(max-width:600px){
+ .card,.feature,.gallery-item,.horizon article{border-radius:6px}
+}
