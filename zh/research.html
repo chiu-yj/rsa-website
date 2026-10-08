@@ -1,7 +1,151 @@
-<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f7f3"><title>研究與技術驗證｜RSA 住宅基地環境分析</title><meta name="description" content="RSA 研究方法、技術架構、早期 Radiance 日影比對與 r44 測試紀錄，以及日照、風環境、UTCI 的科學限制。"><link rel="canonical" href="https://rsa-analyzer.com/zh/research.html"><link rel="alternate" hreflang="en" href="https://rsa-analyzer.com/research.html"><link rel="alternate" hreflang="zh-TW" href="https://rsa-analyzer.com/zh/research.html"><meta property="og:locale" content="zh_TW"><meta property="og:type" content="website"><meta property="og:title" content="研究與技術驗證｜RSA"><meta property="og:description" content="RSA 研究方法、技術架構、早期 Radiance 日影比對與 r44 測試紀錄，以及日照、風環境、UTCI 的科學限制。"><meta property="og:image" content="https://rsa-analyzer.com/assets/img/rsa-solar-shading-analysis.png"><link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/brand.css"><script src="../assets/js/brand.js" defer></script></head><body><a class="skip" href="#main">跳至主要內容</a><div class="concept-banner"><strong>獨立研究開發中的平台</strong> · 未來產品線與合作方案屬概念規劃，RSA 尚未登記成立公司。 <a href="company.html#transparency">了解目前狀態 ↗</a></div><header class="site-header"><div class="container header-inner"><a class="logo" href="index.html" aria-label="RSA 首頁"><span class="logo-mark">RSA</span><span class="logo-word"><strong>Residential Site Analyzer</strong><small>ARCHITECTURAL INTELLIGENCE</small></span></a><nav class="desktop-nav" aria-label="主要導覽"><a href="platform.html">平台</a><a href="solutions.html">應用方案</a><a href="research.html" aria-current="page">研究與驗證</a><a href="company.html">關於 RSA</a></nav><a class="nav-cta" href="../research.html" lang="en">EN</a><a class="nav-cta" href="contact.html">聯絡我們 ↗</a><button class="menu-toggle" type="button" aria-label="展開導覽選單" aria-controls="mobile-navigation" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button></div><nav class="mobile-nav" id="mobile-navigation" aria-label="手機導覽" hidden data-mobile-nav><a href="platform.html">平台</a><a href="solutions.html">應用方案</a><a href="research.html" aria-current="page">研究與驗證</a><a href="company.html">關於 RSA</a><a href="contact.html">聯絡我們 ↗</a><a href="../research.html" lang="en">English ↗</a></nav></header><main id="main">
-<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="index.html">首頁</a> / 研究與驗證</div><div class="eyebrow">研究方法 / 透明且可追溯的證據</div><h1>科學可信度，<br>從 <span class="serif">說清楚限制</span> 開始。</h1><p class="lead">RSA 的研究核心是把建築環境數據轉譯成可理解、可追溯、能支持前期決策的資訊，同時清楚保留模型的限制。</p></div></section>
-<section class="section"><div class="container"><div class="eyebrow">01 / 研究架構</div><h2>從輸入，到驗證，<br>再到使用者理解。</h2><div class="process"><article><span class="step">01 / INPUT</span><h3>確認輸入</h3><p>定義基地、建物幾何、環境來源與分析假設。</p></article><article><span class="step">02 / ANALYZE</span><h3>產生證據</h3><p>依不同分析主題，使用適用的方法與模型。</p></article><article><span class="step">03 / VALIDATE</span><h3>檢驗結果</h3><p>和參考工具比對，紀錄差異、環境與測試條件。</p></article><article><span class="step">04 / EVALUATE</span><h3>評估理解</h3><p>規劃使用者研究，檢視資訊是否改善理解與決策。</p></article></div></div></section>
-<section class="section dark" id="validation"><div class="container"><div class="eyebrow light">02 / 歷史版本驗證</div><h2>每個數字，<br>都有版本脈絡。</h2><p class="lead">以下資料來自 RSA r42、r44 歷史開發紀錄，不能直接作為最新版本或全系統通過驗證的證明。</p><div class="metric-grid" style="margin-top:37px"><article class="metric"><div class="meta">r42 / 直接陰影 IoU</div><strong>0.9795</strong><p>與 Radiance 參考結果比較的歷史紀錄，包含 3/3 標記通過的案例。</p></article><article class="metric"><div class="meta">r42 / 邊界距離</div><strong>0.25 m</strong><p>特定測試條件下的 Hausdorff 距離，歷史面積偏差約 −2.05%。</p></article><article class="metric"><div class="meta">r44 / 回歸測試</div><strong>321</strong><p>該版本歷史紀錄中標記為 PASS 的測試。</p></article></div><p class="small" style="color:#bdc9bf;margin-top:25px">資料來源：RSA 內部研發交接與早期版本紀錄。要形成可重現的正式驗證，仍須整理基準案例、執行環境、原始資料、測試腳本並於現行系統重跑。</p></div></section>
-<section class="section alt"><div class="container"><div class="split"><div><div class="eyebrow">03 / 技術環境</div><h2>整合分析，<br>保留方法依據。</h2><p class="lead">RSA 以 Python 與 Streamlit 為主要研究原型技術，探索建築量體、時間、位置與環境視覺化的整合。</p><p class="copy">研發文件曾參考 OpenStreetMap、台灣 NLSC、中央氣象署、ERA5、Open-Meteo 等資料來源；出現在文件中不代表所有 API 已上線或資料精度已驗證。</p></div><div class="feature-list"><div class="feature"><span class="icon">⌘</span><h3>Python / Streamlit</h3><p>研究系統主架構與互動介面。</p></div><div class="feature"><span class="icon">◷</span><h3>日照／遮蔭</h3><p>時間與幾何條件下的日影研究。</p></div><div class="feature"><span class="icon">↗</span><h3>風環境</h3><p>方向性探索，尚非 CFD 工程模擬。</p></div><div class="feature"><span class="icon">◉</span><h3>UTCI</h3><p>熱舒適研究，依賴氣象與輻射等輸入條件。</p></div></div></div></div></section>
-<section class="section" id="limitations"><div class="container"><div class="eyebrow">04 / 研究限制</div><h2>可信的研究，<br>不超越證據說話。</h2><div class="three-grid" style="margin-top:38px"><article class="card"><div class="card-pad"><span class="num">01 / 日照</span><h3>僅針對測試條件</h3><p>先前的日影比對不能推論任何基地、日期及新版本皆符合相同精度。</p></div></article><article class="card"><div class="card-pad"><span class="num">02 / 風</span><h3>探索性分析</h3><p>風向視覺化不等於可驗證的 CFD 風速、壓力或行人風舒適結論。</p></div></article><article class="card"><div class="card-pad"><span class="num">03 / UTCI</span><h3>輸入與模型依賴</h3><p>人體熱舒適需要明確的氣象、輻射、幾何與模型前提，不能單憑截圖認定可信度。</p></div></article></div><div class="callout" style="margin-top:28px"><strong>當前定位</strong>RSA 用於住宅基地前期資訊探索、可解釋環境證據與決策研究，不取代 Radiance、CFD、EnergyPlus 或依法規要求的正式工程評估。</div></div></section>
-<section class="section alt"><div class="container"><div class="eyebrow">05 / 研發路線</div><h2>先穩定，再驗證，<br>最後評估人的理解。</h2><div class="horizon" style="margin-top:35px"><article><span class="stage">NOW / 整合</span><h3>穩定核心系統</h3><p>整理 2D／3D 狀態、資料來源、輸入一致性與主要分析功能。</p></article><article><span class="stage">NEXT / 驗證</span><h3>重做可重現的比對</h3><p>以明確的基準案例與誤差指標驗證方法，並公開其適用邊界。</p></article><article><span class="stage">FUTURE / 使用者</span><h3>驗證轉譯成效</h3><p>比較資訊呈現與 AI 解釋，是否讓人更了解分析內容與設計取捨。</p></article></div></div></section><section class="section"><div class="container"><div class="contact-panel"><div><div class="eyebrow light">合作與研究交流</div><h2>以證據為起點。<br><span class="serif" style="color:#d9a586">一起探索可能。</span></h2><p>對住宅基地環境分析、方法驗證、研究合作或未來建築科技應用有興趣？歡迎直接與專案開發者聯絡。</p></div><div class="btn-row"><a class="btn light" href="contact.html">聯絡 RSA ↗</a></div></div></div></section></main><footer class="site-footer"><div class="container"><div class="footer-top"><div class="footer-brand"><strong>RSA<span style="color:#d78b67">.</span></strong><p>以環境證據支持更好的住宅設計決策。源自台灣的獨立建築科技研究與開發專案。</p><a href="mailto:research@rsa-analyzer.com" style="font-size:13px;color:#d9b19b">research@rsa-analyzer.com ↗</a></div><div class="footer-col"><h4>平台</h4><a href="platform.html#core">RSA Core · 研究原型</a><a href="platform.html#studio">RSA Studio · 規劃中</a><a href="platform.html#intelligence">RSA Intelligence · 規劃中</a><a href="platform.html#gallery">真實系統畫面</a></div><div class="footer-col"><h4>探索</h4><a href="solutions.html">應用方案</a><a href="research.html">研究與驗證</a><a href="company.html">品牌理念</a><a href="contact.html">聯絡 RSA</a></div><div class="footer-col"><h4>聯繫</h4><a href="https://github.com/chiu-yj/rsa-website" target="_blank" rel="noopener noreferrer">網站程式碼 ↗</a><a href="mailto:research@rsa-analyzer.com">研究信箱 ↗</a><a href="../" lang="en">English site ↗</a><a href="privacy.html">網站隱私 ↗</a></div></div><div class="footer-bottom"><span>© 2026 RSA · Residential Site Analyzer · 台灣</span><span>獨立研究原型 · 非已成立公司 · 不代表校方正式背書</span></div></div></footer></body></html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>研究與驗證 — RSA 見築科技</title>
+<meta name="description" content="RSA 研究：住宅基地環境證據如何被轉譯、理解並用於設計前期。研究問題、方法、驗證層次、資料來源、限制與路線圖。">
+<link rel="canonical" href="https://rsa-analyzer.com/zh/research.html">
+<link rel="alternate" hreflang="en" href="https://rsa-analyzer.com/research.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://rsa-analyzer.com/zh/research.html">
+<link rel="alternate" hreflang="x-default" href="https://rsa-analyzer.com/research.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RSA · Responsive Space Architecture">
+<meta property="og:title" content="研究與驗證 — RSA 見築科技">
+<meta property="og:description" content="RSA 研究：住宅基地環境證據如何被轉譯、理解並用於設計前期。研究問題、方法、驗證層次、資料來源、限制與路線圖。">
+<meta property="og:url" content="https://rsa-analyzer.com/zh/research.html">
+<meta property="og:image" content="https://rsa-analyzer.com/assets/img/og/utci.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:locale" content="zh_TW">
+<meta name="theme-color" content="#111110">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+
+<div class="statusbar">
+  <div class="wrap mono mono--sm">
+    <span><span class="dot" aria-hidden="true"></span>RSA · 見築科技</span>
+    <span class="muted">Responsive Space Architecture · 台灣 · 2026</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="RSA 首頁">
+      <span class="brand__mark">RSA<i>.</i></span>
+      <span class="brand__name">見築科技<br>Responsive Space Architecture</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-open="選單" data-close="關閉"><span class="menu-btn__label">選單</span></button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="work.html">作品</a>
+      <a href="index.html#expertise">專業領域</a>
+      <a href="platform.html">技術平台</a>
+      <a href="research.html" aria-current="page">研究</a>
+      <a href="company.html">關於</a>
+      <a href="contact.html">聯絡</a>
+      <a class="nav__lang" href="../research.html" lang="en" hreflang="en">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="pagehead">
+  <div class="wrap">
+    <nav class="crumb mono mono--sm" aria-label="Breadcrumb"><a href="index.html">首頁</a><span aria-hidden="true">/</span><span>研究</span></nav>
+    <div class="grid">
+      <h1 class="span-8 display d-xl">科學嚴謹，<br><span style="color:var(--mute-2)">也是一種設計決定。</span></h1>
+      <div class="span-4" style="display:flex;flex-direction:column;gap:16px"><p class="lede">本研究並非僅開發另一套模擬工具，而是檢驗住宅環境資訊如何被轉譯、理解，並支援前期決策。</p><p class="mono mono--sm muted">研究簡報 · 2026 Q4 — 2027 Q4</p></div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">01</span><span class="sheet-head__label">為什麼是高雄</span><span class="sheet-head__aside">案例城市</span></div>
+    <div class="ledger"><div class="ledger__row reveal"><span class="ledger__no">01</span><p class="ledger__t">氣候條件鮮明</p><p class="ledger__d">高雄長夏暖冬、日照充足，夏季高溫潮濕；日照、通風與熱舒適因此成為影響住宅環境品質的重要因素。</p></div><div class="ledger__row reveal"><span class="ledger__no">02</span><p class="ledger__t">在地制度脈絡</p><p class="ledger__d">高雄曾在景觀陽臺、綠化與綠能設計上推動，相關地方細則也持續修訂，讓環境分析有機會連結氣候條件與在地住宅設計。</p></div><div class="ledger__row reveal"><span class="ledger__no">03</span><p class="ledger__t">形成研究問題</p><p class="ledger__d">這些環境差異能否在設計前期被清楚辨識？既有住宅又能否據此形成可追溯的改善依據？</p></div></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">02</span><span class="sheet-head__label">研究問題</span><span class="sheet-head__aside">RQ1 — RQ3</span></div>
+    <h2 class="display d-l" style="margin-bottom:clamp(40px,5vw,72px)">研究分析系統不是「能不能算」，<br><span style="color:var(--orange-ink)">而是「算完之後能不能被使用」。</span></h2>
+    <div class="rq"><div class="rq__row rq__row--head mono mono--sm muted"><span>編號</span><span>研究問題</span><span>驗證層次</span><span>驗證方式</span></div><div class="rq__row reveal"><span class="rq__no">RQ1</span><p class="rq__q">不同樓層、時間及方案的環境差異，能否被可靠辨識？</p><p class="rq__v">技術驗證<br><span>Technical</span></p><p class="rq__h">以參考工具交叉比對，檢查遮蔭與計算誤差。</p></div><div class="rq__row reveal"><span class="rq__no">RQ2</span><p class="rq__q">整合後的環境證據，是否比分散資訊更容易判讀？</p><p class="rq__v">真實案例驗證<br><span>Real cases</span></p><p class="rq__h">稽核高雄基地與周邊高度，控制條件比較 A／B 方案。</p></div><div class="rq__row reveal"><span class="rq__no">RQ3</span><p class="rq__q">這樣的理解，能否支援更好的前期決策？</p><p class="rq__v">使用者驗證<br><span>Users</span></p><p class="rq__h">比較判讀正確率、任務時間與決策理由品質。</p></div></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">03</span><span class="sheet-head__label">研究方法</span></div>
+    <ol class="loop loop--4"><li class="loop__step reveal"><span class="loop__n">01</span><span class="loop__en">輸入</span><p class="loop__d">定義幾何、資料集、模型邊界與輸入假設。</p></li><li class="loop__step reveal"><span class="loop__n">02</span><span class="loop__en">計算</span><p class="loop__d">以適合其限制的方法，進行目標分析。</p></li><li class="loop__step reveal"><span class="loop__n">03</span><span class="loop__en">驗證</span><p class="loop__d">將選定結果與參考工具比對，並記錄誤差。</p></li><li class="loop__step reveal"><span class="loop__n">04</span><span class="loop__en">研究</span><p class="loop__d">透過規劃中的使用者評估，檢驗理解程度。</p></li></ol>
+    <h3 class="h-statement" style="margin:clamp(56px,7vw,96px) 0 28px">同一套環境證據，支援多種住宅情境。</h3>
+    <div class="techs techs--2"><div class="tech reveal"><p class="mono mono--sm">核心研究情境</p><h3 class="tech__name">新建住宅</h3><p>比較不同配置、樓層與時段的環境表現，降低只憑經驗判斷的不確定性。</p></div><div class="tech reveal"><p class="mono mono--sm">延伸應用情境</p><h3 class="tech__name">既有住宅</h3><p>辨識曝曬過強、通風潛勢不足或熱壓力偏高的位置與時段，作為後續改善的量化依據。</p></div></div>
+    <p class="mono mono--sm muted" style="margin-top:16px">核心驗證聚焦新建住宅前期決策；既有住宅作為應用延伸，不擴張為第二個研究主題。</p>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">04</span><span class="sheet-head__label">使用者研究設計</span><span class="sheet-head__aside">規劃中</span></div>
+    <h2 class="display d-l" style="margin-bottom:clamp(36px,4vw,56px)">相同資料、相同任務，<br>只改變資訊呈現方式。</h2>
+    <div class="conds"><div class="cond reveal"><p class="mono mono--sm">Condition A</p><h3>傳統分散資訊</h3><p>日照、風環境與熱舒適結果分別呈現；使用者需自行整合樓層、時間與方案差異。</p></div><div class="cond cond--b reveal"><p class="mono mono--sm">Condition B</p><h3>RSA 整合證據介面</h3><p>將日照、風環境與 UTCI 整合為一致的比較介面；直接呈現樓層 × 時間 × 方案的環境差異。</p></div><span class="conds__vs mono" aria-hidden="true">vs</span></div>
+    <div class="stack" style="grid-template-columns:repeat(3,minmax(0,1fr));margin-top:32px"><div><span class="mono mono--sm orange">01</span><h3>判讀正確率</h3><p>能否正確辨識不同住宅情境的環境差異？</p></div><div><span class="mono mono--sm orange">02</span><h3>任務完成時間</h3><p>能否更有效率地完成比較與判斷？</p></div><div><span class="mono mono--sm orange">03</span><h3>決策理由品質</h3><p>能否提出更完整、且有環境證據支持的選擇理由？</p></div></div>
+    <p class="note-line" style="margin-top:20px"><span class="stamp stamp--planned">規劃中</span><span>規劃：先進行 10–15 人 pilot，再進行正式研究。目前尚無結果。</span></p>
+  </div>
+</section>
+<section id="validation" class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">05</span><span class="sheet-head__label">歷史驗證紀錄</span><span class="sheet-head__aside">r42 / r44</span></div>
+    <p class="body muted" style="margin-bottom:32px;max-width:48em">以下數據來自 r42 與 r44 開發里程碑，不代表新版或整個系統已達科學驗收標準。重現需要原始基準案例、參考環境、測試腳本與現行程式碼。</p>
+    <div class="records"><div class="record reveal"><span class="record__ver"><span class="stamp stamp--record">r42</span></span><span class="record__val">0.9795</span><div><p class="record__label">陰影 IoU（對照 Radiance）</p><p class="record__note">與 Radiance 直接陰影參考之交集聯集比；三個封存案例記錄為通過。</p></div><span class="mono mono--sm muted">歷史</span></div><div class="record reveal"><span class="record__ver"><span class="stamp stamp--record">r42</span></span><span class="record__val">0.25<small>m</small></span><div><p class="record__label">Hausdorff 距離</p><p class="record__note">同一設定下的邊界差距；記載面積偏差約 −2.05%。</p></div><span class="mono mono--sm muted">歷史</span></div><div class="record reveal"><span class="record__ver"><span class="stamp stamp--record">r44</span></span><span class="record__val">321</span><div><p class="record__label">回歸測試</p><p class="record__note">歷史版本曾記錄通過；涵蓋範圍與對新版的適用性需獨立檢視。</p></div><span class="mono mono--sm muted">歷史</span></div></div>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">06</span><span class="sheet-head__label">限制與防護</span><span class="sheet-head__aside">我們不能宣稱什麼</span></div>
+    <div class="limits"><div><p class="mono mono--sm orange">限特定基準</p><h3>陰影</h3><p>早期比較不代表每個日期、幾何或現行版本都具同等精度。</p></div><div><p class="mono mono--sm orange">探索性質</p><h3>風環境</h3><p>不可作為 CFD 風壓或行人安全的證據。</p></div><div><p class="mono mono--sm orange">取決於輸入</p><h3>熱舒適</h3><p>UTCI 結果取決於氣象輸入、輻射、幾何與模型假設。</p></div><div><p class="mono mono--sm orange">開發中</p><h3>研究邊界</h3><p>使用者研究、全面再驗證、重現性與資料來源檢查仍在進行或規劃中；宣稱工程級認證言之過早。</p></div></div>
+    <p class="muted" style="margin-top:20px;font-size:15px;max-width:52em">曾研究或評估的資料來源：OpenStreetMap、內政部國土測繪中心（NLSC）、中央氣象署（CWA）、ERA5、Open-Meteo。列出來源不代表每一項皆已完成即時 API 串接或獨立驗證。</p>
+  </div>
+</section>
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">07</span><span class="sheet-head__label">路線圖</span></div>
+    <div class="roadmap"><div><p class="mono mono--sm muted">現在</p><h3>整合</h3><p>整合可重現的核心：介面狀態、基地幾何、分析一致性與證據紀錄。</p></div><div><p class="mono mono--sm muted">下一步</p><h3>驗證</h3><p>以記錄完整的參考工具、假設與誤差報告，重跑代表性案例。</p></div><div><p class="mono mono--sm muted">未來</p><h3>使用者研究</h3><p>檢驗可追溯的解釋與審慎的 AI 輔助，是否能改善理解與決策。</p></div></div>
+    <h3 class="h-card" style="margin:clamp(48px,6vw,80px) 0 20px">論文範圍內，以及之後的延伸</h3>
+    <div class="board" style="grid-template-columns:1fr 1fr"><div class="board__col"><span class="stamp stamp--real">論文範圍內：必要補強</span><ul><li>基地資料可靠度：地號、宗地定位、坐標、邊界、高度來源紀錄</li><li>高雄案例完整度與版本紀錄</li><li>結果可追溯：輸出樓層、時間、方案證據，保留來源、參數與假設</li></ul></div><div class="board__col"><span class="stamp stamp--planned">未來延伸</span><ul><li>光電設置潛勢：由日照證據找出屋頂候選區域與板面朝向</li><li>附屬發電量估算</li><li>住宅環境知識庫與 AI 解釋</li></ul></div></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer dark">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__lead">
+        <p class="h-card">先見環境，再築未來。</p>
+        <p class="muted" style="max-width:34em">RSA 見築科技：結合建築與空間設計、基地環境分析與自主軟體研發的建築環境科技品牌。</p>
+        <p class="mono mono--sm"><a class="link" href="mailto:research@rsa-analyzer.com">research@rsa-analyzer.com</a></p>
+      </div>
+      <div class="footer__col"><span class="mono mono--sm muted">探索</span><a href="work.html">作品</a><a href="platform.html">技術平台</a><a href="research.html">研究</a></div><div class="footer__col"><span class="mono mono--sm muted">RSA</span><a href="company.html">關於</a><a href="contact.html">聯絡</a><a href="privacy.html">隱私</a></div>
+      <div class="footer__col"><span class="mono mono--sm muted">語言</span><a href="../research.html" lang="en">English</a><a href="research.html" lang="zh-Hant">繁體中文</a></div>
+    </div>
+    <div class="footer__mark" aria-hidden="true">RSA<i>.</i></div>
+    <div class="footer__brandline">
+      <p><strong>RSA. · Responsive Space Architecture</strong><br><span lang="zh-Hant">見築科技有限公司</span></p>
+    </div>
+    <div class="footer__legal">
+      <p>精選作品為創辦人的學術設計作品與過往任職專案參與，並非 RSA 承攬案，也未使用 RSA 進行分析。Residential Site Analyzer 為開發中的研究原型。RSA 不提供依法須由建築師執行之簽證業務。學術背景不代表任何大學之背書。</p>
+      <p class="mono mono--sm">© 2026 RSA · Taiwan</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
