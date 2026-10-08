@@ -2,76 +2,350 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101112">
-<meta name="description" content="Explore RSA: real architectural research prototype visualizing solar exposure, site geometry, exploratory wind and UTCI-oriented thermal comfort. Evidence-led decisions for residential design.">
-<title>RSA — Environmental Intelligence for Residential Design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RSA — Responsive Space Architecture</title>
+<meta name="description" content="RSA (見築科技) is an architecture and environmental-technology brand from Taiwan: design-led spatial thinking, evidence-driven site analysis, and Residential Site Analyzer, its own research platform.">
 <link rel="canonical" href="https://rsa-analyzer.com/">
 <link rel="alternate" hreflang="en" href="https://rsa-analyzer.com/">
-<link rel="alternate" hreflang="zh-TW" href="https://rsa-analyzer.com/zh/">
+<link rel="alternate" hreflang="zh-Hant" href="https://rsa-analyzer.com/zh/">
+<link rel="alternate" hreflang="x-default" href="https://rsa-analyzer.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="RSA — Environmental Intelligence for Residential Design">
-<meta property="og:description" content="Explore RSA: real architectural research prototype visualizing solar exposure, site geometry, exploratory wind and UTCI-oriented thermal comfort. Evidence-led decisions for residential design.">
+<meta property="og:site_name" content="RSA · Responsive Space Architecture">
+<meta property="og:title" content="RSA — Responsive Space Architecture">
+<meta property="og:description" content="RSA (見築科技) is an architecture and environmental-technology brand from Taiwan: design-led spatial thinking, evidence-driven site analysis, and Residential Site Analyzer, its own research platform.">
 <meta property="og:url" content="https://rsa-analyzer.com/">
-<meta property="og:image" content="https://rsa-analyzer.com/assets/img/rsa-solar-shading-analysis.png">
+<meta property="og:image" content="https://rsa-analyzer.com/assets/img/og/vision-exterior.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="assets/css/home-editorial-v5.css">
-<script src="assets/js/brand.js" defer></script>
-<script src="assets/js/home-editorial-v5.js" defer></script>
+<meta property="og:locale" content="en_US">
+<meta name="theme-color" content="#111110">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-<div class="container">
-<a class="brand" href="/" aria-label="RSA Home"><span class="brand-logo">RSA<em>.</em></span><span class="brand-sub">Residential Site Analyzer</span></a>
-<nav class="nav-links" aria-label="Main navigation"><a href="platform.html" >Platform</a><a href="research.html" >Research</a><a href="company.html" >About</a><a href="contact.html" >Contact</a></nav>
-<a class="language" href="zh/" hreflang="zh-TW" aria-label="Switch to Traditional Chinese">繁中</a>
-<button type="button" class="menu-toggle" aria-label="Toggle navigation" aria-controls="mobile-navigation" aria-expanded="false" data-menu-toggle><span></span><span></span><span></span></button>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="statusbar">
+  <div class="wrap mono mono--sm">
+    <span><span class="dot" aria-hidden="true"></span>RSA · Responsive Space Architecture</span>
+    <span class="muted">見築科技 · Taiwan · Vol. 01 / 2026</span>
+  </div>
 </div>
-<nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" hidden data-mobile-nav><a href="platform.html" >Platform</a><a href="research.html" >Research</a><a href="company.html" >About</a><a href="contact.html" >Contact</a><a href="zh/">繁中 ↗</a></nav>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="RSA home">
+      <span class="brand__mark">RSA<i>.</i></span>
+      <span class="brand__name">Responsive Space<br>Architecture</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-open="Menu" data-close="Close"><span class="menu-btn__label">Menu</span></button>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <a href="work.html">Work</a>
+      <a href="index.html#expertise">Expertise</a>
+      <a href="platform.html">Platform</a>
+      <a href="research.html">Research</a>
+      <a href="company.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav__lang" href="zh/index.html" lang="zh-Hant" hreflang="zh-Hant">繁中</a>
+    </nav>
+  </div>
 </header>
+
 <main id="main">
-<section class="hero" aria-labelledby="hero-title">
-<div class="hero-media" aria-hidden="true"><img class="hero-image is-active" data-stage-image="solar" src="assets/img/rsa-solar-shading-analysis.png" fetchpriority="high" width="1649" height="928" alt="" aria-hidden="true"><img class="hero-image" data-stage-image="site" src="assets/img/rsa-site-locate-workspace.png" loading="lazy" width="1649" height="928" alt="" aria-hidden="true"><img class="hero-image" data-stage-image="utci" src="assets/img/rsa-utci-analysis.png" loading="lazy" width="1649" height="928" alt="" aria-hidden="true"></div>
-<div class="hero-scrim" aria-hidden="true"></div>
-<div class="container hero-contents">
-<div class="kicker light">RESIDENTIAL SITE ANALYZER</div>
-<h1 id="hero-title">Understand the site.<br>Shape what comes next.</h1>
-<p class="hero-summary">Environmental analysis should do more than produce data. RSA explores how sunlight, wind context and outdoor thermal comfort can inform the earliest design decisions.</p>
-<div class="hero-actions"><a class="cta" href="research.html">Explore the research <span aria-hidden="true">↗</span></a><a class="cta ghost" href="platform.html#gallery">View the prototype <span aria-hidden="true">→</span></a></div>
-<div class="hero-utility">
-<p class="hero-credit" data-stage-credit aria-live="polite">REAL RSA PROTOTYPE / SOLAR &amp; SHADING</p>
-<div class="hero-select" role="group" aria-label="Choose research imagery"><button type="button" data-stage-button="solar" data-stage-caption="REAL RSA PROTOTYPE / SOLAR &amp; SHADING" aria-pressed="true">Solar &amp; shading</button><button type="button" data-stage-button="site" data-stage-caption="REAL RSA PROTOTYPE / SITE &amp; MASSING" aria-pressed="false">Site context</button><button type="button" data-stage-button="utci" data-stage-caption="REAL RSA PROTOTYPE / UTCI VIEW" aria-pressed="false">Thermal comfort</button></div>
-</div>
-</div><a class="scroll-hint" href="#mission">SCROLL TO EXPLORE ↓</a>
+
+<!-- COVER -->
+<section class="cover" aria-labelledby="cover-title">
+  <div class="cover__sun" data-sun aria-hidden="true">
+    <svg viewBox="0 0 1000 420" fill="none">
+      <path class="sun-path" d="M 40 418 A 470 400 0 0 1 960 418" stroke="#8c8b86" stroke-width="1" stroke-dasharray="2 6"/>
+      <line class="sun-ray" x1="560" y1="418" x2="300" y2="140" stroke="#ff5a1f" stroke-width="1" stroke-dasharray="10 4 2 4"/>
+      <circle class="sun-dot" cx="300" cy="140" r="11" fill="#ff5a1f"/>
+    </svg>
+  </div>
+  <p class="cover__sunread mono mono--sm muted" aria-hidden="true">Scroll = time of day<br><span class="orange" data-sun-time>10:12</span></p>
+  <div class="wrap">
+    <div class="cover__top">
+      <div class="cover__kicker"><span class="stamp stamp--real">RSA / Responsive Space Architecture</span><span class="mono muted">Sheet A-000 / Cover</span></div>
+      <h1 id="cover-title" class="cover__title display d-xxl"><span class="ln">Understand the <span class="g">environment</span><span class="o">.</span></span><span class="ln ln--2">Shape the future<span class="o">.</span></span></h1>
+      <div class="cover__intro">
+        <p class="lede">Design-led spatial thinking. Evidence-driven environmental research. Technology that connects them.</p>
+        <p class="zh muted" lang="zh-Hant">先見環境，再築未來。</p>
+        <div class="cover__ctas">
+          <a class="btn btn--primary" href="work.html">Explore our work <span class="arr" aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="platform.html">Discover the technology <span class="arr" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="cover__diptych">
+      <a class="fig fig--design reveal" href="project-vision.html">
+        <div class="fig__img ratio-32"><img src="assets/img/work/vision-exterior.webp" width="2048" height="1298" alt="A low, layered gallery building rendered across a reflecting pond under an overcast sky" fetchpriority="high"></div>
+        <div class="fig__cap"><span class="mono">Fig. 01 — Design</span><span class="mono">Vision Art Gallery · founder’s academic design · visualisation</span></div>
+      </a>
+      <span class="cover__x" aria-hidden="true">×</span>
+      <a class="fig fig--env reveal" href="platform.html">
+        <div class="fig__img ratio-43 fig__img--logo"><img src="assets/img/rsa/analyzer-logo.webp" width="1150" height="490" alt="Residential Site Analyzer logo: an isometric building massing on a site plane under an orange sun path, beside the letters RSA and the name 住宅基地環境分析 Residential Site Analyzer"></div>
+        <div class="fig__cap"><span class="mono">Fig. 02 — The platform</span><span class="mono">Residential Site Analyzer · product mark</span></div>
+      </a>
+    </div>
+  </div>
 </section>
-<section class="section section-white" id="mission" aria-labelledby="mission-title">
-<div class="container"><div class="mission-grid"><div class="section-id"><strong>01</strong>OUR MISSION</div><div class="mission-content">
-<h2 id="mission-title">Analysis tells us<br>what happens.<br>Clarity helps us<br>decide what’s next.</h2><p class="section-desc">A more understandable way to evaluate the environment around residential buildings. Not a replacement for specialist simulation—a research-driven bridge between technical evidence and early-stage architectural judgment.</p>
-<div class="mission-bottom"><strong>ENVIRONMENTAL EVIDENCE → HUMAN UNDERSTANDING → INFORMED DESIGN</strong><span>Research-led platform · In development</span></div>
-</div></div></div>
+
+<aside class="legend" aria-label="Legend — how to read this site">
+  <div class="wrap"><p class="legend__title">Legend — how to read this site</p><ul><li><span class="stamp stamp--real">Real</span> Exists today · real prototype screenshot</li><li><span class="stamp stamp--explore">Exploratory</span> Preview, not validated</li><li><span class="stamp stamp--record">Record</span> Historical, version-specific</li><li><span class="stamp stamp--planned">Planned</span> Future direction, not built</li><li><span class="stamp stamp--concept">Concept</span> Illustration only</li><li><span class="stamp stamp--work">Founder</span> Founder’s work, credited by role</li></ul></div>
+</aside>
+<div class="cut" aria-hidden="true"><span class="cut__tag cut__tag--l">1 —</span><span class="cut__tag cut__tag--r">— 1</span></div>
+
+<!-- 01 RSA -->
+<section class="section" aria-labelledby="rsa-title">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">01</span><span class="sheet-head__label">What RSA stands for</span><span class="sheet-head__aside">Brand / product</span></div>
+    <h2 id="rsa-title" class="sr-only">What RSA stands for</h2>
+    <div class="letters">
+      <div class="letter reveal"><span class="letter__glyph" aria-hidden="true">R</span><h3 class="letter__word">Responsive</h3><p>Respond to climate, surroundings and the people who will live there.</p></div>
+      <div class="letter reveal"><span class="letter__glyph" aria-hidden="true">S</span><h3 class="letter__word">Space</h3><p>Sites, homes, public space and everyday life.</p></div>
+      <div class="letter reveal"><span class="letter__glyph" aria-hidden="true">A</span><h3 class="letter__word">Architecture</h3><p>Design and analysis as one continuous way of working.</p></div>
+    </div>
+    <div class="grid" style="margin-top:clamp(40px,5vw,72px);row-gap:20px">
+      <p class="span-7 lede">RSA starts from architectural and spatial design, then adds site analysis, digital simulation and its own software research. We look at how space answers to sun, wind, heat and people—and try to turn complex environmental information into evidence that can be understood and traced.</p>
+      <p class="span-4 start-9 naming"><strong>RSA</strong> is the company brand. <strong>Residential Site Analyzer</strong> is the research platform it develops.</p>
+    </div>
+  </div>
 </section>
-<section class="section section-soft" id="work" aria-labelledby="work-title"><div class="container">
-<div class="work-intro"><div><div class="section-id"><strong>02</strong>THE WORK</div><h2 id="work-title" style="margin-top:22px">Built around real<br>environmental questions.</h2></div><p class="section-desc">From site geometry to time-aware results, the prototype is developed to make environmental relationships visible—not just numerical.</p></div>
-<div class="work-item"><div class="work-visual"><img src="assets/img/rsa-site-locate-workspace.png" loading="lazy" width="1649" height="928" alt="Real RSA research site and building massing interface"></div><div class="work-copy"><div class="index">01 / SITE CONTEXT</div><h3>Every design begins with a place.</h3><p>Explore the relationship between a residential site, surrounding building massing and the assumptions that shape an environmental analysis.</p><a class="small-link" href="platform.html#core">Explore RSA Core <span aria-hidden="true">↗</span></a></div></div>
-<div class="work-item reverse"><div class="work-copy"><div class="index">02 / SOLAR &amp; SHADING</div><h3>Make time part of the picture.</h3><p>Follow how daylight and shadow patterns shift across time and built form. Solar comparison has selected historical benchmark records, with newer-version validation still needed.</p><a class="small-link" href="platform.html#gallery">View the prototype <span aria-hidden="true">↗</span></a></div><div class="work-visual"><img src="assets/img/rsa-solar-shading-analysis.png" loading="lazy" width="1649" height="928" alt="Real RSA time-dependent solar and shading research interface"></div></div>
-</div></section>
-<section class="section section-dark" id="gallery" aria-labelledby="gallery-title"><div class="container">
-<div class="gallery-head"><div><div class="section-id"><strong>03</strong>SELECTED RESEARCH IMAGERY</div><h2 id="gallery-title">A closer look at<br>the evidence.</h2></div><p class="section-desc">Real screenshots from the RSA development environment. The images show working research interfaces—not a certified engineering product.</p></div>
-<div class="gallery-grid"><a href="platform.html#gallery" class="gallery-image gallery-primary" aria-label="Solar &amp; shading — Explore the full prototype gallery"><img src="assets/img/rsa-solar-shading-analysis.png" width="1649" height="928" loading="lazy" alt="Solar &amp; shading — RSA actual prototype interface"><div class="gallery-label"><strong>Solar &amp; shading</strong><span>Time-based architectural environment</span></div></a><a href="platform.html#gallery" class="gallery-image gallery-secondary" aria-label="Wind exploration — Explore the full prototype gallery"><img src="assets/img/rsa-wind-analysis.png" width="1649" height="928" loading="lazy" alt="Wind exploration — RSA actual prototype interface"><div class="gallery-label"><strong>Wind exploration</strong><span>Directional preview · not CFD</span></div></a><a href="platform.html#gallery" class="gallery-image gallery-secondary" aria-label="UTCI-oriented analysis — Explore the full prototype gallery"><img src="assets/img/rsa-utci-analysis.png" width="1649" height="928" loading="lazy" alt="UTCI-oriented analysis — RSA actual prototype interface"><div class="gallery-label"><strong>UTCI-oriented analysis</strong><span>Thermal-comfort research view</span></div></a></div>
-<div class="gallery-bottom"><p>Images from real RSA development. Methods, limitations and current-version reliability are discussed separately.</p><a href="platform.html#gallery" class="small-link">Explore the full prototype gallery <span aria-hidden="true">↗</span></a></div>
-</div></section>
-<section class="section section-white" id="research" aria-labelledby="research-title"><div class="container"><div class="research-layout">
-<div><div class="section-id"><strong>04</strong>METHODS &amp; VALIDATION</div><h2 id="research-title">Evidence is useful<br>when its limits<br>are visible.</h2><p class="section-desc">RSA develops explainable early-stage analysis with clear boundaries between calculated results, preview tools, research hypotheses and validated comparisons.</p><a class="small-link" href="research.html#validation">Methods and scientific context <span aria-hidden="true">↗</span></a></div>
-<div><div class="research-rows"><div class="research-row"><strong>0.9795</strong><div><b>Historical r42 shadow IoU</b>Against Radiance reference, archived cases</div></div><div class="research-row"><strong>0.25 m</strong><div><b>Historical r42 Hausdorff distance</b>For one recorded shadow comparison setup</div></div><div class="research-row"><strong>321</strong><div><b>Historical r44 passing tests</b>Not a guarantee for newer releases</div></div></div><p class="research-footnote">Historical milestone records are version-specific. Wind analysis is exploratory, and Claude API integration remains planned.</p></div>
-</div></div></section>
-<section class="section section-soft contact-section" id="contact" aria-labelledby="contact-title"><div class="container"><div class="section-id"><strong>05</strong>LET’S CONNECT</div>
-<h2 id="contact-title">Better evidence.<br>Better conversations.</h2>
-<p class="section-desc">Interested in environmental analysis, reproducibility or possible research collaboration? Reach out to the independent RSA project.</p>
-<a class="contact-email" href="mailto:research@rsa-analyzer.com">research@rsa-analyzer.com <span aria-hidden="true">↗</span></a>
-</div></section>
+
+<!-- 02 WHY -->
+<section class="section" style="padding-top:0" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">02</span><span class="sheet-head__label">Environment first</span><span class="sheet-head__aside">Why RSA exists</span></div>
+    <div class="grid" style="row-gap:32px">
+      <h2 id="why-title" class="span-8 h-statement why">A site’s sun, its neighbours, its heat and its habits shape a space <span class="g">before any rendering does.</span></h2>
+      <div class="span-4 start-9 body muted" style="display:flex;flex-direction:column;gap:16px;font-size:16px"><p>Good architecture should start from understanding where it stands. RSA grew out of the founder’s spatial-design training and residential development work, where environmental questions came up early and were hard to answer.</p><p>Can a site be understood more clearly before design begins? How do floors, hours and massing options differ? Can the results be explained to people without an engineering background—and do they actually improve the design?</p></div>
+      <div class="span-12 chain" style="margin-top:8px"><span>Observe</span><span>Analyze</span><span class="on">Design</span><span>Evaluate</span><span>Refine</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 EXPERTISE -->
+<section id="expertise" class="section" style="padding-top:0" aria-labelledby="exp-title">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">03</span><span class="sheet-head__label">Expertise</span><span class="sheet-head__aside">Three disciplines, one loop</span></div>
+    <h2 id="exp-title" class="sr-only">Expertise</h2>
+    <div class="chapter">
+      <figure class="fig chapter__fig reveal">
+        <div class="fig__img ratio-43"><img src="assets/img/work/corner-reading.webp" loading="lazy" alt="Timber lattice reading structure with people seated at different heights"></div>
+        <figcaption class="fig__cap"><span class="mono">Corner Library · founder’s academic design · visualisation</span></figcaption>
+      </figure>
+      <div class="chapter__text reveal">
+        <p class="chapter__k"><span class="chapter__l">D</span>RSA Design</p>
+        <h3 class="display d-m">Designing buildings, and rethinking how life happens in them.</h3>
+        <p class="body muted">Spatial concepts, site layout and massing, early residential planning, façade and material strategy, and design visualisation—grounded in the founder’s academic work and residential practice.</p>
+        <ul class="ticks"><li>Spatial & architectural concepts</li><li>Site layout & massing</li><li>Early residential planning</li><li>Façade & material strategy</li><li>Design visualisation</li></ul>
+        <p class="mono mono--sm muted">Founder’s experience. RSA does not offer statutory architect services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="environment" class="dark section" aria-labelledby="env-title">
+  <div class="wrap">
+    <div class="grid" style="margin-bottom:clamp(40px,5vw,72px);row-gap:28px">
+      <div class="span-9"><p class="chapter__k"><span class="chapter__l">E</span>RSA Environment</p><h3 id="env-title" class="display d-l">Making invisible site conditions into design evidence you can <span style="color:var(--orange)">read.</span></h3></div>
+      <div class="bridge__note bridge__note--side reveal"><span class="mono mono--sm">▲ Note on the work above</span><p style="font-size:15px">The founder’s projects predate RSA and were not analysed with it. What follows is Residential Site Analyzer, a separately developed research prototype.</p></div>
+    </div>
+    <div class="viewer">
+      <div class="viewer__tabs" role="tablist" aria-label="Residential Site Analyzer"><button class="viewer__tab" role="tab" id="tab-solar" aria-selected="true" aria-controls="panel-solar">Solar &amp; shading</button><button class="viewer__tab" role="tab" id="tab-site" aria-selected="false" aria-controls="panel-site" tabindex="-1">Site</button><button class="viewer__tab" role="tab" id="tab-massing" aria-selected="false" aria-controls="panel-massing" tabindex="-1">Massing A/B</button><button class="viewer__tab" role="tab" id="tab-wind" aria-selected="false" aria-controls="panel-wind" tabindex="-1">Wind</button><button class="viewer__tab" role="tab" id="tab-utci" aria-selected="false" aria-controls="panel-utci" tabindex="-1">Thermal comfort</button></div>
+      <div class="viewer__stage">
+        <div class="viewer__panel" role="tabpanel" id="panel-solar" aria-labelledby="tab-solar">
+          <figure>
+            <div class="viewer__frame"><img src="assets/img/rsa/solar-shading.webp" width="1850" height="1041" loading="lazy" alt="RSA prototype: time-based 3D solar and shading view of a target building among neighbouring blocks"></div>
+            <figcaption class="fig__cap"><span class="mono">Sun position and neighbouring obstruction, by floor and time</span><span class="stamp stamp--real">Real screenshot · dev build</span></figcaption>
+          </figure>
+        </div>
+        <div class="viewer__panel" role="tabpanel" id="panel-site" aria-labelledby="tab-site" hidden>
+          <figure>
+            <div class="viewer__frame"><img src="assets/img/rsa/site-workspace.webp" width="1850" height="1041" loading="lazy" alt="RSA prototype: map-based site workspace with a parcel outline and setup panels"></div>
+            <figcaption class="fig__cap"><span class="mono">Site boundary, surroundings and analysis conditions</span><span class="stamp stamp--real">Real screenshot · dev build</span></figcaption>
+          </figure>
+        </div>
+        <div class="viewer__panel" role="tabpanel" id="panel-massing" aria-labelledby="tab-massing" hidden>
+          <figure>
+            <div class="viewer__frame"><img src="assets/img/rsa/massing.webp" width="1850" height="1041" loading="lazy" alt="RSA prototype: massing editor on a map, with Scheme A outlined in red among neighbouring buildings"></div>
+            <figcaption class="fig__cap"><span class="mono">Scheme A massing editor — A/B schemes share one site model</span><span class="stamp stamp--real">Real screenshot · dev build</span></figcaption>
+          </figure>
+        </div>
+        <div class="viewer__panel" role="tabpanel" id="panel-wind" aria-labelledby="tab-wind" hidden>
+          <figure>
+            <div class="viewer__frame"><img src="assets/img/rsa/wind.webp" width="1850" height="1041" loading="lazy" alt="RSA prototype: 3D wind-direction view with streamlines passing a cluster of building masses"></div>
+            <figcaption class="fig__cap"><span class="mono">Background wind and massing — relative ventilation potential, not CFD</span><span class="stamp stamp--explore">Real screenshot · exploratory</span></figcaption>
+          </figure>
+        </div>
+        <div class="viewer__panel" role="tabpanel" id="panel-utci" aria-labelledby="tab-utci" hidden>
+          <figure>
+            <div class="viewer__frame"><img src="assets/img/rsa/utci.webp" width="1850" height="1041" loading="lazy" alt="RSA prototype: UTCI-oriented outdoor thermal comfort view with building massing"></div>
+            <figcaption class="fig__cap"><span class="mono">Outdoor heat stress by time and position (UTCI)</span><span class="stamp stamp--explore">Real screenshot · exploratory</span></figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="viewer__side">
+        <p class="muted">What the prototype explores today. Each module is marked by how far along it really is.</p>
+        <ol class="modules"><li><span class="n">M1</span><span class="t">Site context</span><span class="stamp stamp--real">Real</span><span class="d">Map-based parcel and surroundings</span></li><li><span class="n">M2</span><span class="t">Building massing</span><span class="stamp stamp--real">Real</span><span class="d">Target building, neighbours, A/B schemes</span></li><li><span class="n">M3</span><span class="t">Solar &amp; shading</span><span class="stamp stamp--real">Real</span><span class="d">Time- and floor-aware shadow study</span></li><li><span class="n">M4</span><span class="t">Wind</span><span class="stamp stamp--explore">Exploratory</span><span class="d">Directional preview — not CFD</span></li><li><span class="n">M5</span><span class="t">UTCI comfort</span><span class="stamp stamp--explore">Exploratory</span><span class="d">Research view; inputs and limits disclosed</span></li></ol>
+        <a class="link" href="platform.html">Inside the platform <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="tech-title">
+  <div class="wrap">
+    <div class="grid" style="row-gap:24px;margin-bottom:clamp(36px,4vw,56px);align-items:end">
+      <div class="span-8"><p class="chapter__k"><span class="chapter__l">T</span>RSA Technology</p><h3 id="tech-title" class="display d-l">Tools that explain the environment, built from design questions.</h3></div>
+      <p class="span-4 ai-rule">AI may only organise and explain analysis evidence that has a source. It never invents results and never replaces physical simulation.</p>
+    </div>
+    <div class="techs">
+        <div class="tech reveal"><span class="stamp stamp--real">Exists · in development</span><h3 class="tech__name">Residential Site Analyzer</h3><p>Python / Streamlit research prototype for site, massing, sun and shade, wind preview and UTCI-oriented comfort.</p></div>
+        <div class="tech reveal"><span class="stamp stamp--concept">Concept</span><h3 class="tech__name">RSA Studio</h3><p>A/B design, cross-floor and time comparison, decision visualisation and report summaries.</p></div>
+        <div class="tech reveal"><span class="stamp stamp--planned">Planned · not deployed</span><h3 class="tech__name">RSA Intelligence</h3><p>Sourced explanations of results through large language models such as the Claude API, with human review.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 WORK -->
+<section class="section" style="padding-top:0" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">04</span><span class="sheet-head__label">Founder’s selected work</span><span class="sheet-head__aside">2020 — 2025</span></div>
+    <div class="grid" style="margin-bottom:clamp(40px,5vw,72px);row-gap:24px;align-items:end">
+      <h2 id="work-title" class="span-7 display d-l">The work comes first.</h2>
+      <p class="span-5 body muted">Academic design and residential projects are where the questions came from. Each one is credited to its real author and role. <strong style="color:var(--ink)">None were RSA commissions or analysed with RSA.</strong></p>
+    </div>
+    <div class="mosaic">
+      <a class="fig m1 reveal" href="project-vision.html">
+        <div class="fig__img ratio-43"><img src="assets/img/work/960/vision-gallery.webp" loading="lazy" alt="Vision Art Gallery"></div>
+        <div class="work-cap"><span class="work-cap__no">W-01</span><span class="work-cap__title">Vision Art Gallery</span><span class="work-cap__arrow" aria-hidden="true">↗</span>
+          <span class="work-cap__meta mono mono--sm"><span class="stamp stamp--work">Individual academic design</span>2021 · Graduation project</span></div>
+      </a>
+      <a class="fig m2 reveal" href="project-corner.html">
+        <div class="fig__img ratio-34"><img src="assets/img/work/960/corner-shelves.webp" loading="lazy" alt="Corner Library"></div>
+        <div class="work-cap"><span class="work-cap__no">W-02</span><span class="work-cap__title">Corner Library</span><span class="work-cap__arrow" aria-hidden="true">↗</span>
+          <span class="work-cap__meta mono mono--sm"><span class="stamp stamp--work">Individual academic design</span>2020</span></div>
+      </a>
+      <a class="fig m3 reveal" href="project-encounter.html">
+        <div class="fig__img ratio-34"><img src="assets/img/work/960/encounter-front.webp" loading="lazy" alt="Encounter Treatment"></div>
+        <div class="work-cap"><span class="work-cap__no">W-03</span><span class="work-cap__title">Encounter Treatment</span><span class="work-cap__arrow" aria-hidden="true">↗</span>
+          <span class="work-cap__meta mono mono--sm"><span class="stamp stamp--work">Individual academic design</span>2020 · TSID entry</span></div>
+      </a>
+      <a class="fig m4 reveal" href="project-futian.html">
+        <div class="fig__img ratio-32"><img src="assets/img/work/960/futian-exterior.webp" loading="lazy" alt="Futian · Seven Residences"></div>
+        <div class="work-cap"><span class="work-cap__no">W-04</span><span class="work-cap__title">Futian · Seven Residences</span><span class="work-cap__arrow" aria-hidden="true">↗</span>
+          <span class="work-cap__meta mono mono--sm"><span class="stamp stamp--work">Prior employment</span>2022–2025 · Project lead</span></div>
+      </a>
+      <a class="fig m5 reveal" href="project-datong.html">
+        <div class="fig__img ratio-43"><img src="assets/img/work/960/datong-facade.webp" loading="lazy" alt="Datong · Fifteen Residences"></div>
+        <div class="work-cap"><span class="work-cap__no">W-05</span><span class="work-cap__title">Datong · Fifteen Residences</span><span class="work-cap__arrow" aria-hidden="true">↗</span>
+          <span class="work-cap__meta mono mono--sm"><span class="stamp stamp--work">Prior employment</span>2024– · Early planning</span></div>
+      </a>
+      <div class="m-note reveal">
+        <p class="h-statement">Light, enclosure and scale change how a place is lived in. That is the question RSA tries to make measurable.</p>
+        <p style="margin-top:24px"><a class="link" href="work.html">All five projects <span aria-hidden="true">→</span></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 METHOD -->
+<section class="section" style="padding-top:0" aria-labelledby="method-title">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">05</span><span class="sheet-head__label">Method</span><span class="sheet-head__aside">Observe → Refine</span></div>
+    <div class="grid" style="margin-bottom:clamp(40px,5vw,64px);row-gap:24px;align-items:end">
+      <h2 id="method-title" class="span-7 display d-l">Five steps.<br>One loop.</h2>
+      <p class="span-5 body muted">How RSA intends design and analysis to feed each other. It describes the method going forward—it is not a claim about how the earlier projects were designed.</p>
+    </div>
+    <ol class="loop">
+      <li class="loop__step reveal"><span class="loop__n">01</span><span class="loop__en">Observe</span><p class="loop__d">Site, neighbours, climate, people and use.</p></li>
+      <li class="loop__step reveal"><span class="loop__n">02</span><span class="loop__en">Analyze</span><p class="loop__d">Suitable models and data, with assumptions stated.</p></li>
+      <li class="loop__step reveal"><span class="loop__n">03</span><span class="loop__en">Design</span><p class="loop__d">Bring conditions into layout, massing, space and materials.</p></li>
+      <li class="loop__step reveal"><span class="loop__n">04</span><span class="loop__en">Evaluate</span><p class="loop__d">Compare options with indicators that fit the question.</p></li>
+      <li class="loop__step reveal"><span class="loop__n">05</span><span class="loop__en">Refine</span><p class="loop__d">Keep limits and uncertainty visible; keep improving.</p></li>
+    </ol>
+    <div class="loop__return" aria-hidden="true">
+      <svg viewBox="0 0 1000 72" preserveAspectRatio="none" fill="none">
+        <path d="M 900 0 L 900 44 L 100 44 L 100 8" stroke="#ff5a1f" stroke-width="1.5" stroke-dasharray="14 5 3 5" vector-effect="non-scaling-stroke"/>
+        <path d="M 94 16 L 100 4 L 106 16" stroke="#ff5a1f" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- 06 RESEARCH -->
+<section class="section" style="padding-top:0" aria-labelledby="research-title">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">06</span><span class="sheet-head__label">Research &amp; integrity</span><span class="sheet-head__aside">Research brief · 2026 Q4 — 2027 Q4</span></div>
+    <div class="grid" style="margin-bottom:clamp(48px,6vw,88px);row-gap:28px;align-items:end">
+      <h2 id="research-title" class="span-9 display d-l">The question is not whether it can compute.<br><span style="color:var(--orange-ink)">It is whether the result can be used.</span></h2>
+      <p class="span-3 body muted" style="font-size:15px">The current study focuses on early decisions for new housing, with Kaohsiung as the case city. RSA does not replace Radiance, CFD or EnergyPlus; it studies how their kind of evidence can be read and used earlier.</p>
+    </div>
+    <div class="rq">
+      <div class="rq__row rq__row--head mono mono--sm muted"><span>No.</span><span>Research question</span><span>Validation layer</span><span>How it is tested</span></div>
+      <div class="rq__row reveal"><span class="rq__no">RQ1</span><p class="rq__q">Can environmental differences between floors, times and schemes be identified reliably?</p><p class="rq__v">Technical<br><span>技術驗證</span></p><p class="rq__h">Cross-check shading and calculation error against reference tools.</p></div>
+      <div class="rq__row reveal"><span class="rq__no">RQ2</span><p class="rq__q">Are the integrated results understood more easily than scattered information?</p><p class="rq__v">Real cases<br><span>真實案例驗證</span></p><p class="rq__h">Check real Kaohsiung sites and surrounding heights; compare A/B schemes under controlled conditions.</p></div>
+      <div class="rq__row reveal"><span class="rq__no">RQ3</span><p class="rq__q">Does that understanding support better early-stage decisions?</p><p class="rq__v">Users<br><span>使用者驗證</span></p><p class="rq__h">Same data, same task, only the presentation changes: compare accuracy, time and quality of reasoning.</p></div>
+    </div>
+    <div class="board" style="margin-top:clamp(56px,7vw,104px)">
+      <div class="board__col reveal"><span class="stamp stamp--real">Built</span><h3>Prototype &amp; core workflow</h3><ul><li>Site location, boundary &amp; surrounding massing</li><li>Sun, shade, wind direction &amp; UTCI views</li><li>Floor &amp; time comparison, A/B schemes</li><li>Report &amp; evidence output</li></ul></div>
+      <div class="board__col reveal"><span class="stamp stamp--explore">In validation</span><h3>Reliability &amp; real cases</h3><ul><li>Sun / shade reference comparison</li><li>Real Kaohsiung site case</li><li>Consistency across views, data &amp; reports</li></ul></div>
+      <div class="board__col reveal"><span class="stamp stamp--planned">Next</span><h3>User research</h3><ul><li>Authoritative site-data integration (assessment)</li><li>Case-data completeness</li><li>10–15 person user pilot</li><li>Formal comprehension &amp; decision study</li></ul></div>
+    </div>
+    <p class="mono mono--sm muted" style="margin-top:16px">Built features still require continued verification. Status compiled from project version records.</p>
+    <div style="margin-top:clamp(72px,9vw,128px)"><div class="sheet-head"><span class="sheet-head__no">06.1</span><span class="sheet-head__label">Archived records</span><span class="sheet-head__aside">r42 / r44 · not current certification</span></div></div>
+    <div class="records">
+      <div class="record reveal"><span class="record__ver"><span class="stamp stamp--record">r42</span></span><span class="record__val">0.9795</span><div><p class="record__label">Shadow IoU vs. Radiance</p><p class="record__note">Intersection-over-union against a Radiance direct-shadow reference on archived cases. Version-specific.</p></div><span class="mono mono--sm muted">Historical</span></div>
+      <div class="record reveal"><span class="record__ver"><span class="stamp stamp--record">r42</span></span><span class="record__val">0.25<small>m</small></span><div><p class="record__label">Hausdorff distance</p><p class="record__note">Boundary difference in one recorded comparison setup; archived data also notes an area bias of about −2.05%. Version-specific.</p></div><span class="mono mono--sm muted">Historical</span></div>
+      <div class="record reveal"><span class="record__ver"><span class="stamp stamp--record">r44</span></span><span class="record__val">321</span><div><p class="record__label">Regression tests passed</p><p class="record__note">Historically marked PASS. Not proof that newer builds or all modules meet a scientific acceptance threshold.</p></div><span class="mono mono--sm muted">Historical</span></div>
+    </div>
+    <p style="margin-top:32px"><a class="link" href="research.html">Methods, limits &amp; provenance <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+
+<!-- 07 CONTACT -->
+<section class="section rule" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">07</span><span class="sheet-head__label">Contact</span></div>
+    <div class="grid" style="row-gap:32px">
+      <h2 id="contact-title" class="span-8 h-statement">Questions about a site, environmental evidence or research collaboration are welcome.</h2>
+      <div class="span-12"><a class="contact__mail" href="mailto:research@rsa-analyzer.com">research@rsa-analyzer.com</a></div>
+      <div class="span-12 cover__ctas"><a class="btn btn--primary" href="mailto:research@rsa-analyzer.com">Discuss a project <span class="arr" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="work.html">Explore our work <span class="arr" aria-hidden="true">→</span></a><a class="btn btn--ghost" href="platform.html">Discover the technology <span class="arr" aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>
 </main>
-<footer class="site-footer"><div class="container"><div class="footer-main"><a class="footer-brand" href="/">RSA.</a><nav class="footer-links" aria-label="Footer navigation"><a href="platform.html" >Platform</a><a href="research.html" >Research</a><a href="company.html" >About</a><a href="contact.html" >Contact</a><a href="privacy.html" >Privacy</a></nav></div>
-<div class="footer-footnote"><p>Independent research prototype · Not incorporated · Academic affiliation does not imply institutional endorsement.</p><span>© 2026 RSA · Taiwan</span></div></div></footer>
-</body></html>
+
+<footer class="footer dark">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__lead">
+        <p class="h-card">Understand the environment. Shape the future.</p>
+        <p class="muted" style="max-width:34em">RSA is an architecture and environmental-technology brand from Taiwan, connecting spatial design, site analysis and its own software research.</p>
+        <p class="mono mono--sm"><a class="link" href="mailto:research@rsa-analyzer.com">research@rsa-analyzer.com</a></p>
+      </div>
+      <div class="footer__col"><span class="mono mono--sm muted">Explore</span><a href="work.html">Work</a><a href="platform.html">Platform</a><a href="research.html">Research</a></div><div class="footer__col"><span class="mono mono--sm muted">RSA</span><a href="company.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a></div>
+      <div class="footer__col"><span class="mono mono--sm muted">Language</span><a href="index.html" lang="en">English</a><a href="zh/index.html" lang="zh-Hant">繁體中文</a></div>
+    </div>
+    <div class="footer__mark" aria-hidden="true">RSA<i>.</i></div>
+    <div class="footer__brandline">
+      <p><strong>RSA. · Responsive Space Architecture</strong><br><span lang="zh-Hant">見築科技有限公司</span></p>
+    </div>
+    <div class="footer__legal">
+      <p>Selected works are the founder’s academic designs and prior-employment projects. They are not RSA commissions and were not analysed with RSA. Residential Site Analyzer is a research prototype in development. RSA does not provide statutory architect services. Academic background does not imply endorsement by any university.</p>
+      <p class="mono mono--sm">© 2026 RSA · Taiwan</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
