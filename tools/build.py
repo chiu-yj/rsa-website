@@ -334,7 +334,7 @@ MOSAIC = [  # (slug, img in 960/, ratio, css class, meta-en, meta-zh)
     ('corner', 'corner-shelves', 'ratio-34', 'm2', '2020', '2020'),
     ('encounter', 'encounter-front', 'ratio-34', 'm3', '2020 · TSID entry', '2020 · TSID 競圖'),
     ('futian', 'futian-exterior', 'ratio-32', 'm4', '2022–2025 · Project lead', '2022–2025 · 專案負責'),
-    ('datong', 'datong-facade', 'ratio-43', 'm5', '2024– · Early planning', '2024– · 前期規劃'),
+    ('datong', 'datong-exterior', 'ratio-43', 'm5', '2024– · Early planning', '2024– · 前期規劃'),
 ]
 
 

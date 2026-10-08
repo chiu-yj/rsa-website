@@ -165,7 +165,7 @@ PROJECTS = [
              ('futian-material', 'ratio-32', {'en': ('Stone, metal and timber façade detail between townhouses', 'Material'), 'zh': ('石材、金屬與木紋立面細部', '材料')}),
              ('futian-street', 'ratio-21', {'en': ('Townhouse terrace seen across a planted street edge', 'Street frontage'), 'zh': ('沿街植栽與透天住宅群', '街道立面')})]),
   dict(slug='datong', no='05', kind='employment',
-       name={'en': 'Datong · Fifteen Residences', 'zh': '竹南大同十五戶住宅'}, alt_name={'en': '竹南大同十五戶住宅', 'zh': 'Datong · Fifteen Residences'},
+       name={'en': 'Datong · Fifteen Residences', 'zh': '大同案 · 十五戶透天住宅'}, alt_name={'en': '大同案 · 十五戶透天住宅', 'zh': 'Datong · Fifteen Residences'},
        klabel={'en': 'Prior employment', 'zh': '過往任職專案'},
        year='2024–', area=None,
        loc={'en': 'Zhunan, Miaoli', 'zh': '苗栗 · 竹南'},
