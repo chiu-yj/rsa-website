@@ -601,6 +601,7 @@ def notfound(lang):
     import re
     doc = page(lang, '404.html', t[0], t[2], body)
     # GitHub Pages serves /404.html for any missing path, so every local reference must be root-absolute.
+    doc = doc.replace('href="zh/404.html"', 'href="/zh/"')
     doc = re.sub(r'(href|src)="(?!https?:|/|#|mailto:)([^"]+)"', r'\1="/\2"', doc)
     write(lang, '404.html', doc)
 

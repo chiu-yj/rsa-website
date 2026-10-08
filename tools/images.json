@@ -1,0 +1,265 @@
+{
+ "assets/img/rsa/analyzer-icon.webp": {
+  "h": 470,
+  "sizes": [],
+  "w": 450
+ },
+ "assets/img/rsa/massing.webp": {
+  "h": 1041,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 1850
+ },
+ "assets/img/rsa/site-workspace.webp": {
+  "h": 1041,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 1850
+ },
+ "assets/img/rsa/solar-shading.webp": {
+  "h": 1041,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 1850
+ },
+ "assets/img/rsa/utci.webp": {
+  "h": 1041,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 1850
+ },
+ "assets/img/rsa/wind.webp": {
+  "h": 1041,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 1850
+ },
+ "assets/img/work/corner-exterior.webp": {
+  "h": 1299,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/corner-library.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/corner-portal.webp": {
+  "h": 1903,
+  "sizes": [
+   640,
+   960
+  ],
+  "w": 1410
+ },
+ "assets/img/work/corner-reading.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/corner-shelves.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/corner-underpass.webp": {
+  "h": 1299,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/datong-exterior.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/datong-facade.webp": {
+  "h": 1299,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/datong-street.webp": {
+  "h": 1300,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/datong-streetwide.webp": {
+  "h": 1300,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/encounter-atrium.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/encounter-front.webp": {
+  "h": 1600,
+  "sizes": [
+   640,
+   960
+  ],
+  "w": 1200
+ },
+ "assets/img/work/encounter-hall.webp": {
+  "h": 1299,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/encounter-lounge.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/futian-entry.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/futian-exterior.webp": {
+  "h": 1300,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/futian-material.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/futian-street.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/vision-corridor.webp": {
+  "h": 587,
+  "sizes": [
+   640,
+   960
+  ],
+  "w": 1099
+ },
+ "assets/img/work/vision-exterior.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/vision-gallery.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/vision-passage.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/vision-sculpture.webp": {
+  "h": 1298,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 2048
+ },
+ "assets/img/work/vision-tower.webp": {
+  "h": 2151,
+  "sizes": [
+   640,
+   960,
+   1440
+  ],
+  "w": 1600
+ }
+}

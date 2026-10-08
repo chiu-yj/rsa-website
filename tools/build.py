@@ -11,6 +11,17 @@ sys.path.insert(0, os.path.dirname(__file__))
 from content import SITE, UI, PROJECTS
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+
+def _asset_version():
+    import hashlib
+    h = hashlib.sha1()
+    for f in ('assets/css/site.css', 'assets/js/site.js'):
+        h.update(open(os.path.join(ROOT, f), 'rb').read())
+    return h.hexdigest()[:8]
+
+
+ASSET_V = _asset_version()
 e = html.escape
 LANGS = ('en', 'zh')
 
@@ -29,7 +40,39 @@ def url(lang, fname):
     return base + ('' if fname == 'index.html' else fname)
 
 
+_IMG = None
+_IMG_RE = __import__('re').compile(r'<img src="(?P<pre>(?:\.\./)?)assets/img/(?P<dir>work|rsa)/(?P<thumb>960/)?(?P<name>[a-z0-9-]+\.webp)"(?P<rest>[^>]*)>')
+
+
+def responsive(doc):
+    """Give every work/rsa image a srcset of the widths made by tools/images.py."""
+    global _IMG
+    import json, re
+    if _IMG is None:
+        _IMG = json.load(open(os.path.join(os.path.dirname(__file__), 'images.json')))
+
+    def sub(m):
+        rel = f"assets/img/{m['dir']}/{m['name']}"
+        meta = _IMG.get(rel)
+        if not meta:
+            return m.group(0)
+        pre = m['pre']
+        cands = [(w, f"{pre}assets/img/{m['dir']}/{w}/{m['name']}") for w in meta['sizes']] + [(meta['w'], pre + rel)]
+        default = next((u for w, u in cands if w >= 960), cands[-1][1])
+        if m['dir'] == 'rsa':
+            sizes = '(max-width: 900px) 100vw, 75vw'
+        elif m['thumb']:
+            sizes = '(max-width: 600px) 100vw, (max-width: 900px) 50vw, 40vw'
+        else:
+            sizes = '(max-width: 900px) 100vw, 66vw'
+        rest = re.sub(r'\s(width|height)="\d+"', '', m['rest'])
+        srcset = ', '.join(f'{u} {w}w' for w, u in cands)
+        return f'<img src="{default}" srcset="{srcset}" sizes="{sizes}" width="{meta["w"]}" height="{meta["h"]}"{rest}>'
+    return _IMG_RE.sub(sub, doc)
+
+
 def write(lang, fname, doc):
+    doc = responsive(doc)
     p = out_path(lang, fname)
     os.makedirs(os.path.dirname(p), exist_ok=True)
     with open(p, 'w', encoding='utf-8') as f:
@@ -37,6 +80,24 @@ def write(lang, fname, doc):
 
 
 # ------------------------------------------------------------------ chrome
+def jsonld(lang):
+    import json
+    org = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {"@type": "Organization", "@id": SITE['domain'] + "/#org", "name": "RSA",
+             "alternateName": ["Responsive Space Architecture", "見築科技有限公司", "RSA 見築科技"],
+             "url": SITE['domain'] + "/", "logo": SITE['domain'] + "/apple-touch-icon.png", "email": SITE['email'],
+             "description": "Architecture and environmental-technology brand from Taiwan connecting spatial design, site analysis and its own software research.",
+             "founder": {"@type": "Person", "name": "Chiu Yu-Jyun", "alternateName": "邱禹鈞"},
+             "areaServed": "TW"},
+            {"@type": "WebSite", "@id": SITE['domain'] + "/#website", "url": SITE['domain'] + "/", "name": "RSA · Responsive Space Architecture",
+             "inLanguage": ["en", "zh-Hant"], "publisher": {"@id": SITE['domain'] + "/#org"}},
+        ],
+    }
+    return '<script type="application/ld+json">' + json.dumps(org, ensure_ascii=False) + '</script>\n'
+
+
 def head(lang, fname, title, desc, img='assets/img/work/960/vision-exterior.webp'):
     P = pre(lang)
     hl = 'en' if lang == 'en' else 'zh-Hant'
@@ -72,8 +133,8 @@ def head(lang, fname, title, desc, img='assets/img/work/960/vision-exterior.webp
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?{fonts}&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{P}assets/css/site.css">
-</head>
+<link rel="stylesheet" href="{P}assets/css/site.css?v={ASSET_V}">
+{jsonld(lang) if fname == "index.html" else ""}</head>
 <body>
 <a class="skip" href="#main">{UI[lang]['skip']}</a>
 '''
@@ -139,7 +200,7 @@ def footer(lang, fname):
   </div>
 </footer>
 
-<script src="{P}assets/js/site.js" defer></script>
+<script src="{P}assets/js/site.js?v={ASSET_V}" defer></script>
 </body>
 </html>
 '''
@@ -176,7 +237,7 @@ H = {
    sub='Design-led spatial thinking. Evidence-driven environmental research. Technology that connects them.',
    cta1='Explore our work', cta2='Discover the technology',
    fig1='Fig. 01 — Design', fig1c='Vision Art Gallery · founder’s academic design · visualisation',
-   fig2='Fig. 02 — The platform', fig2s='Residential Site Analyzer · product mark', logo_alt='Residential Site Analyzer logo: an isometric building massing on a site plane under an orange sun path, beside the letters RSA and the name 住宅基地環境分析 Residential Site Analyzer',
+   fig2='Fig. 02 — The platform', fig2s='Residential Site Analyzer · product mark', logo_alt='Residential Site Analyzer product mark: an isometric building massing on a site plane under an orange sun path',
    legend_t='Legend — how to read this site',
    legend=[('real', 'Real', 'Exists today · real prototype screenshot'), ('explore', 'Exploratory', 'Preview, not validated'),
            ('record', 'Record', 'Historical, version-specific'), ('planned', 'Planned', 'Future direction, not built'),
@@ -256,7 +317,7 @@ H = {
    sub='以建築設計理解場域，以環境分析建立證據，以自主科技探索更好的空間。',
    cta1='探索作品', cta2='了解 RSA 技術',
    fig1='圖 01 — 設計', fig1c='視界美術館 · 創辦人學術設計 · 設計模擬圖',
-   fig2='圖 02 — 技術平台', fig2s='住宅基地環境分析 · 產品標誌', logo_alt='Residential Site Analyzer 標誌：基地平面上的等角量體與橘色太陽軌跡，旁為 RSA 字樣與「住宅基地環境分析 Residential Site Analyzer」',
+   fig2='圖 02 — 技術平台', fig2s='住宅基地環境分析 · 產品標誌', logo_alt='Residential Site Analyzer 產品標誌：基地平面上的等角量體與橘色太陽軌跡',
    legend_t='圖例 — 如何閱讀本站',
    legend=[('real', '真實', '現有原型 · 真實系統截圖'), ('explore', '探索中', '預覽性質，未經驗證'),
            ('record', '紀錄', '歷史版本紀錄'), ('planned', '規劃中', '未來方向，尚未建置'),
@@ -334,7 +395,7 @@ MOSAIC = [  # (slug, img in 960/, ratio, css class, meta-en, meta-zh)
     ('corner', 'corner-shelves', 'ratio-34', 'm2', '2020', '2020'),
     ('encounter', 'encounter-front', 'ratio-34', 'm3', '2020 · TSID entry', '2020 · TSID 競圖'),
     ('futian', 'futian-exterior', 'ratio-32', 'm4', '2022–2025 · Project lead', '2022–2025 · 專案負責'),
-    ('datong', 'datong-facade', 'ratio-43', 'm5', '2024– · Early planning', '2024– · 前期規劃'),
+    ('datong', 'datong-exterior', 'ratio-43', 'm5', '2024– · Early planning', '2024– · 前期規劃'),
 ]
 
 
@@ -422,7 +483,7 @@ def home(lang):
       </a>
       <span class="cover__x" aria-hidden="true">×</span>
       <a class="fig fig--env reveal" href="platform.html">
-        <div class="fig__img ratio-43 fig__img--logo"><img src="{P}assets/img/rsa/analyzer-logo.webp" width="1150" height="490" alt="{h['logo_alt']}"></div>
+        <div class="fig__img ratio-43 fig__img--logo"><div class="pmark"><img src="{P}assets/img/rsa/analyzer-icon.webp" width="450" height="470" alt=""><p class="pmark__name"><span>Residential<br>Site Analyzer</span><span class="pmark__zh" lang="zh-Hant">住宅基地環境分析</span><span class="pmark__by mono">by RSA.</span></p></div><span class="sr-only">{h['logo_alt']}</span></div>
         <div class="fig__cap"><span class="mono">{h['fig2']}</span><span class="mono">{h['fig2s']}</span></div>
       </a>
     </div>
@@ -760,7 +821,7 @@ def case(lang, i):
 
 
 def write_sitemap():
-    pages = ['index.html', 'work.html'] + [f'project-{p["slug"]}.html' for p in PROJECTS] + ['platform.html', 'research.html', 'company.html', 'contact.html', 'privacy.html']
+    pages = ['index.html', 'work.html'] + [f'project-{p["slug"]}.html' for p in PROJECTS] + ['expertise.html', 'platform.html', 'research.html', 'notes.html', 'company.html', 'contact.html', 'privacy.html']
     xs = []
     for f in pages:
         alts = ''.join(f'<xhtml:link rel="alternate" hreflang="{h}" href="{url(l, f)}"/>' for l, h in (('en', 'en'), ('zh', 'zh-Hant')))
@@ -778,7 +839,8 @@ if __name__ == '__main__':
         work_index(lang)
         for i in range(len(PROJECTS)):
             case(lang, i)
-    import pages2
+    import pages2, pages3
     pages2.build_all()
+    pages3.build_all()
     write_sitemap()
     print('built')
