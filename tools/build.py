@@ -234,6 +234,7 @@ H = {
    eyebrow='RSA / Responsive Space Architecture', sheet='Sheet A-000 / Cover',
    h1='<span class="ln">Understand the <span class="g">environment</span><span class="o">.</span></span><span class="ln ln--2">Shape the future<span class="o">.</span></span>',
    alt_tag='<p class="zh muted" lang="zh-Hant">先見環境，再築未來。</p>',
+   product_k='What we are building', product='<strong>Residential Site Analyzer</strong> — a research tool that turns a residential site’s sun, shade, wind and outdoor heat into evidence for early design decisions.', product_link='See the platform', product_stamp='In development',
    sub='Design-led spatial thinking. Evidence-driven environmental research. Technology that connects them.',
    cta1='Explore our work', cta2='Discover the technology',
    fig1='Fig. 01 — Design', fig1c='Vision Art Gallery · founder’s academic design · visualisation',
@@ -277,6 +278,7 @@ H = {
    t_items=[('Residential Site Analyzer', 'real', 'Exists · in development', 'Python / Streamlit research prototype for site, massing, sun and shade, wind preview and UTCI-oriented comfort.'),
             ('RSA Studio', 'concept', 'Concept', 'A/B design, cross-floor and time comparison, decision visualisation and report summaries.'),
             ('RSA Intelligence', 'planned', 'Planned · not deployed', 'Sourced explanations of results through large language models such as the Claude API, with human review.')],
+   t_more='How we plan to use Claude',
    t_ai='AI may only organise and explain analysis evidence that has a source. It never invents results and never replaces physical simulation.',
    s4=('04', 'Founder’s selected work', '2020 — 2025'),
    w_h='The work comes first.',
@@ -314,6 +316,7 @@ H = {
    eyebrow='RSA / Responsive Space Architecture', sheet='圖號 A-000 / 封面',
    h1='<span class="ln">先見<span class="g">環境</span>，</span><span class="ln ln--2">再築未來<span class="o">。</span></span>',
    alt_tag='<p class="muted" lang="en">Understand the environment. Shape the future.</p>',
+   product_k='我們正在打造', product='<strong>Residential Site Analyzer</strong>（住宅基地環境分析）— 把住宅基地的日照、遮蔭、風與戶外熱環境，轉成設計前期可用的證據。', product_link='看技術平台', product_stamp='開發中',
    sub='以建築設計理解場域，以環境分析建立證據，以自主科技探索更好的空間。',
    cta1='探索作品', cta2='了解 RSA 技術',
    fig1='圖 01 — 設計', fig1c='視界美術館 · 創辦人學術設計 · 設計模擬圖',
@@ -357,6 +360,7 @@ H = {
    t_items=[('Residential Site Analyzer', 'real', '現有 · 開發中', 'Python／Streamlit 研究原型：基地、量體、日照遮蔭、風向預覽與 UTCI 導向熱舒適。'),
             ('RSA Studio', 'concept', '概念', 'A/B 設計、跨樓層與時序比較、決策視覺化與報告摘要。'),
             ('RSA Intelligence', 'planned', '規劃中 · 尚未部署', '以 Claude API 等大型語言模型，提供有來源依據的結果解讀，並由人工審查。')],
+   t_more='我們計畫如何使用 Claude',
    t_ai='AI 只能整理與解釋有來源的分析證據；不憑空產生結果，也不取代物理模擬。',
    s4=('04', '創辦人精選作品', '2020 — 2025'),
    w_h='先有作品，才有問題。',
@@ -428,7 +432,7 @@ def home(lang):
         </div>'''
     modules = ''.join(f'<li><span class="n">M{n + 1}</span><span class="t">{t}</span>{stamp(k, S[k])}<span class="d">{d}</span></li>' for n, (t, k, d) in enumerate(h['modules']))
     t_items = ''.join(f'''
-        <div class="tech reveal">{stamp(k, s)}<h3 class="tech__name">{n}</h3><p>{d}</p></div>''' for n, k, s, d in h['t_items'])
+        <div class="tech reveal">{stamp(k, s)}<h3 class="tech__name">{n}</h3><p>{d}</p>{f'<a class="link" href="platform.html#intelligence">{h["t_more"]} <span aria-hidden="true">→</span></a>' if n == 'RSA Intelligence' else ''}</div>''' for n, k, s, d in h['t_items'])
 
     mosaic = ''
     for slug, img, ratio, cls, men, mzh in MOSAIC:
@@ -470,6 +474,7 @@ def home(lang):
       <div class="cover__intro">
         <p class="lede">{h['sub']}</p>
         {h['alt_tag']}
+        <a class="product-line" href="platform.html"><span class="product-line__k mono mono--sm">{h['product_k']} {stamp('explore', h['product_stamp'])}</span><span class="product-line__t">{h['product']}</span><span class="product-line__go mono mono--sm">{h['product_link']} →</span></a>
         <div class="cover__ctas">
           <a class="btn btn--primary" href="work.html">{h['cta1']} <span class="arr" aria-hidden="true">→</span></a>
           <a class="btn btn--ghost" href="platform.html">{h['cta2']} <span class="arr" aria-hidden="true">→</span></a>

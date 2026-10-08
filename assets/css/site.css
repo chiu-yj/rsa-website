@@ -624,3 +624,31 @@ html:lang(zh-Hant) .value h3 { text-transform: none; font-weight: 900; }
 .note__t { font-weight: 600; font-size: clamp(22px, 2.2vw, 32px); line-height: 1.15; letter-spacing: -.01em; margin-bottom: 12px; }
 .note__b { color: var(--mute); max-width: 44em; margin-bottom: 14px; }
 @media (max-width: 760px) { .note { grid-template-columns: 1fr; } .note__meta { flex-direction: row; align-items: center; } }
+
+/* Cover product statement */
+.product-line { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; border: 1px solid var(--line); border-left: 4px solid var(--orange); background: var(--white); max-width: 34em; transition: background .2s; }
+.product-line:hover { background: var(--paper-2); }
+.product-line__k { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; color: var(--mute); }
+.product-line__t { font-size: 16px; line-height: 1.45; }
+.product-line__go { color: var(--orange-ink); }
+.cover__intro .product-line { background: var(--white); }
+
+/* ---------- RSA Intelligence (planned) ---------- */
+.aiflow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border: 1px dashed var(--line); background-image: repeating-linear-gradient(135deg, transparent 0 10px, rgba(17,17,16,.035) 10px 11px); }
+.aiflow__step { padding: 22px clamp(14px, 1.6vw, 24px) 26px; border-right: 1px dashed var(--line); display: flex; flex-direction: column; gap: 10px; position: relative; }
+.aiflow__step:last-child { border-right: 0; }
+.aiflow__step:nth-child(2) { background: var(--ink); color: var(--paper); }
+.aiflow__step:nth-child(2) p, .aiflow__step:nth-child(2) .loop__n { color: var(--dark-mute); }
+.aiflow__t { font-variation-settings: "wdth" 70; font-weight: 800; font-size: clamp(24px, 2.4vw, 36px); line-height: .95; text-transform: uppercase; }
+.aiflow__step:nth-child(2) .aiflow__t { color: var(--orange); }
+.aiflow__step p { font-size: 15px; color: var(--mute); }
+.aiflow__step:not(:last-child)::after { content: "→"; position: absolute; right: -11px; top: 22px; width: 22px; height: 22px; display: grid; place-items: center; background: var(--paper); font-size: 14px; z-index: 1; }
+@media (max-width: 900px) { .aiflow { grid-template-columns: 1fr 1fr; } .aiflow__step:nth-child(2) { border-right: 0; } .aiflow__step:nth-child(-n+2) { border-bottom: 1px dashed var(--line); } .aiflow__step::after { display: none; } }
+@media (max-width: 560px) { .aiflow { grid-template-columns: 1fr; } .aiflow__step { border-right: 0; border-bottom: 1px dashed var(--line); } .aiflow__step:last-child { border-bottom: 0; } }
+.aiex { margin: clamp(48px, 6vw, 88px) 0 0; border: 1.5px dashed var(--orange); padding: clamp(20px, 2.6vw, 36px); background: var(--white); display: flex; flex-direction: column; gap: 14px; }
+.aiex__cap { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; justify-content: space-between; }
+.aiex__q { font-weight: 600; font-size: clamp(18px, 1.6vw, 22px); }
+.aiex__q::before { content: "Q  "; font-family: var(--font-mono); color: var(--orange-ink); font-size: 14px; }
+.aiex__a { font-size: 16px; line-height: 1.6; max-width: 52em; padding-left: 16px; border-left: 2px solid var(--line-soft); }
+html:lang(zh-Hant) .aiflow__t { text-transform: none; font-weight: 900; }
+.aiex__cap .stamp { white-space: normal; line-height: 1.3; }
