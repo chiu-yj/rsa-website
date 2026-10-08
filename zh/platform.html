@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/site.css?v=dbecfb79">
+<link rel="stylesheet" href="../assets/css/site.css?v=074690be">
 </head>
 <body>
 <a class="skip" href="#main">跳到主要內容</a>
@@ -110,6 +110,28 @@
     <div class="horizons"><article class="horizon horizon--core"><span style="align-self:flex-start" class="stamp stamp--real">真實 · 研究原型</span><h2 class="horizon__name">Site<br>Analyzer</h2><p class="muted">真實運作的研究環境：基地、量體、日照遮蔭、風向預覽與熱舒適整合在一起。</p><ul><li>Python 與 Streamlit 實作</li><li>2D／3D 環境持續開發中</li><li>分析與證據工作流程</li></ul></article><article class="horizon horizon--concept"><span style="align-self:flex-start" class="stamp stamp--concept">概念 · 尚未提供</span><h2 class="horizon__name">RSA<br>Studio</h2><p class="muted">構想中的方案比較環境，把環境差異連回背後的設計選擇。</p><ul><li>替代量體與 A／B 情境</li><li>樓層與時間尺度比較</li><li>報告摘要（概念）</li></ul></article><article class="horizon horizon--concept"><span style="align-self:flex-start" class="stamp stamp--planned">規劃中 · 尚未部署</span><h2 class="horizon__name">RSA<br>Intelligence</h2><p class="muted">規劃研究：AI（例如 Claude API）能否以人可以檢驗與質疑的方式解釋分析結果。</p><ul><li>解釋與來源結果綁定</li><li>人工審查與可追溯的假設</li><li>明確揭露不確定性與方法限制</li></ul></article></div>
   </div>
 </section>
+
+<section class="section" style="padding-top:0" id="intelligence">
+  <div class="wrap">
+    <div class="sheet-head"><span class="sheet-head__no">02.1</span><span class="sheet-head__label">RSA Intelligence · 我們計畫如何使用 Claude</span><span class="sheet-head__aside">規劃中 · 尚未部署</span></div>
+    <div class="grid" style="row-gap:24px;align-items:end;margin-bottom:clamp(36px,4vw,56px)">
+      <h2 class="span-6 display d-l">解釋證據，<br><span style="color:var(--mute-2)">而不是捏造證據。</span></h2>
+      <p class="span-6 body muted" style="max-width:none">Residential Site Analyzer 已能計算樓層、時間與方案層級的結果；真正困難的是「讀懂」這些結果。RSA Intelligence 是規劃中的研究：透過 Claude API，以白話解釋分析結果——每句話都對應來源、說明限制，並經過人工審查。</p>
+    </div>
+    <ol class="aiflow"><li class="aiflow__step reveal"><span class="loop__n">01</span><span class="aiflow__t">輸入</span><p>Site Analyzer 的計算結果：樓層 × 時間 × 方案數值、使用的參數、資料來源與已知限制。</p></li><li class="aiflow__step reveal"><span class="loop__n">02</span><span class="aiflow__t">Claude</span><p>寫出簡短說明：方案之間哪裡不同、在哪些樓層與時段，以及哪些假設影響最大。</p></li><li class="aiflow__step reveal"><span class="loop__n">03</span><span class="aiflow__t">檢查</span><p>每一句說明都必須指向來源結果；沒有來源的說法會被移除，並註明不確定性與方法限制。</p></li><li class="aiflow__step reveal"><span class="loop__n">04</span><span class="aiflow__t">人工審查</span><p>由設計者或研究者審閱、修改後，才放進報告或設計討論。</p></li></ol>
+    <div class="grid" style="row-gap:40px;margin-top:clamp(48px,6vw,88px);align-items:start">
+      <div class="span-7 stack" style="grid-template-columns:repeat(2,minmax(0,1fr))"><div><h3>方案摘要</h3><p>A／B 方案在日照、遮蔭與戶外熱舒適上的差異，依樓層與時段整理。</p></div><div><h3>假設提示</h3><p>哪些輸入（日期、高度、氣象來源）最影響結果，下一步該檢查什麼。</p></div><div><h3>報告草稿</h3><p>環境報告中的白話段落，附可追溯的引用。</p></div><div><h3>問答</h3><p>只根據已分析的案例回答設計團隊的問題，並附來源。</p></div></div>
+      <div class="span-4 start-9"><p class="mono muted" style="margin-bottom:10px">基本原則</p><ul class="ticks"><li>Claude 只解釋結果，不產生也不修改計算結果。</li><li>每個說法都連到來源數值、參數或方法說明。</li><li>文字中明確寫出不確定性、模型限制與未驗證模組。</li><li>任何內容分享前都經人工審查。</li><li>不取代物理模擬，也不取代專業判斷。</li></ul></div>
+    </div>
+    <figure class="aiex reveal">
+      <figcaption class="aiex__cap"><span class="mono">說明可能長這樣</span><span class="stamp stamp--concept">概念示意 · 非 Claude 實際回應</span></figcaption>
+      <p class="aiex__q">為什麼方案 B 的 3 樓在冬季下午直射日照比較少？</p>
+      <p class="aiex__a">在這個〔示例〕案例中，西南側鄰棟在〔14:00〕到〔16:00〕之間高於方案 B 的 3 樓立面，因此該時段大部分時間立面位於陰影中〔→ 陰影結果，3F，12/21〕。方案 A 往北退縮〔2 m〕，避開了部分陰影。此比較採用晴空假設與已記錄的鄰棟高度〔→ 輸入來源〕；實際雲量會同時降低兩個方案的日照。</p>
+      <p class="mono mono--sm muted">括號內為示意用的佔位數值；箭頭標示每句話將引用的來源。</p>
+    </figure>
+    <p class="body muted" style="margin-top:28px;max-width:46em">這些說明是否真的有幫助，本身就是研究問題，將在規劃中的使用者研究中檢驗：相同資料與任務，比較有無說明時的判讀正確率、任務時間與決策理由品質。 <a class="link" href="research.html">研究與驗證 <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
 <section class="section" style="padding-top:0">
   <div class="wrap">
     <div class="sheet-head"><span class="sheet-head__no">03</span><span class="sheet-head__label">以設計連結，以方法透明</span></div>
@@ -152,6 +174,6 @@
   </div>
 </footer>
 
-<script src="../assets/js/site.js?v=dbecfb79" defer></script>
+<script src="../assets/js/site.js?v=074690be" defer></script>
 </body>
 </html>
