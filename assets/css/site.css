@@ -596,3 +596,31 @@ html:lang(zh-Hant) .value h3 { text-transform: none; font-weight: 900; }
   .cover__diptych .fig--design { grid-column: 1 / span 7; }
   .cover__diptych .fig--env { grid-column: 8 / span 5; margin-top: 0; align-self: end; }
 }
+
+/* Product mark (Residential Site Analyzer): icon + typeset name, no company wordmark */
+.pmark { display: flex; align-items: center; gap: clamp(12px, 2vw, 28px); width: 88%; }
+.pmark img { width: 42%; height: auto; flex: none; }
+.pmark__name { display: flex; flex-direction: column; gap: 8px; color: var(--ink); }
+.pmark__name > span:first-child { font-variation-settings: "wdth" 75; font-weight: 800; font-size: clamp(20px, 2.4vw, 38px); line-height: .95; letter-spacing: -.01em; text-transform: uppercase; }
+.pmark__zh { font-size: clamp(12px, 1.1vw, 16px); letter-spacing: .3em; color: var(--mute); }
+.pmark__by { font-size: 11px; color: var(--orange-ink); }
+
+/* ---------- Expertise pillars ---------- */
+.pillar__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); row-gap: 32px; align-items: start; }
+.pillar__fig { grid-column: 1 / span 7; }
+.pillar__text { grid-column: 9 / span 4; display: flex; flex-direction: column; gap: 18px; }
+.pillar--flip .pillar__fig { grid-column: 6 / span 7; grid-row: 1; }
+.pillar--flip .pillar__text { grid-column: 1 / span 4; grid-row: 1; }
+.pillar__now { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 14px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 15px; }
+.dark .pillar__now { border-color: #3a3a38; }
+.dark .ticks { border-color: #3a3a38; }
+.dark .ticks li { border-color: #2c2c2a; }
+@media (max-width: 900px) { .pillar__fig, .pillar__text, .pillar--flip .pillar__fig, .pillar--flip .pillar__text { grid-column: 1 / -1; grid-row: auto; } }
+
+/* ---------- Notes ---------- */
+.notes { border-top: 2px solid var(--ink); }
+.note { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 12px 40px; padding: 28px 0 32px; border-bottom: 1px solid var(--line); }
+.note__meta { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.note__t { font-weight: 600; font-size: clamp(22px, 2.2vw, 32px); line-height: 1.15; letter-spacing: -.01em; margin-bottom: 12px; }
+.note__b { color: var(--mute); max-width: 44em; margin-bottom: 14px; }
+@media (max-width: 760px) { .note { grid-template-columns: 1fr; } .note__meta { flex-direction: row; align-items: center; } }

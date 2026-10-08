@@ -27,7 +27,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/site.css">
+<link rel="stylesheet" href="../assets/css/site.css?v=dbecfb79">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://rsa-analyzer.com/#org", "name": "RSA", "alternateName": ["Responsive Space Architecture", "見築科技有限公司", "RSA 見築科技"], "url": "https://rsa-analyzer.com/", "logo": "https://rsa-analyzer.com/apple-touch-icon.png", "email": "research@rsa-analyzer.com", "description": "Architecture and environmental-technology brand from Taiwan connecting spatial design, site analysis and its own software research.", "founder": {"@type": "Person", "name": "Chiu Yu-Jyun", "alternateName": "邱禹鈞"}, "areaServed": "TW"}, {"@type": "WebSite", "@id": "https://rsa-analyzer.com/#website", "url": "https://rsa-analyzer.com/", "name": "RSA · Responsive Space Architecture", "inLanguage": ["en", "zh-Hant"], "publisher": {"@id": "https://rsa-analyzer.com/#org"}}]}</script>
 </head>
 <body>
 <a class="skip" href="#main">跳到主要內容</a>
@@ -48,7 +49,7 @@
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-open="選單" data-close="關閉"><span class="menu-btn__label">選單</span></button>
     <nav id="site-nav" class="nav" aria-label="Main">
       <a href="work.html">作品</a>
-      <a href="index.html#expertise">專業領域</a>
+      <a href="expertise.html">專業領域</a>
       <a href="platform.html">技術平台</a>
       <a href="research.html">研究</a>
       <a href="company.html">關於</a>
@@ -85,12 +86,12 @@
     </div>
     <div class="cover__diptych">
       <a class="fig fig--design reveal" href="project-vision.html">
-        <div class="fig__img ratio-32"><img src="../assets/img/work/vision-exterior.webp" width="2048" height="1298" alt="層疊樓板的美術館，倒映在陰天的水面上" fetchpriority="high"></div>
+        <div class="fig__img ratio-32"><img src="../assets/img/work/960/vision-exterior.webp" srcset="../assets/img/work/640/vision-exterior.webp 640w, ../assets/img/work/960/vision-exterior.webp 960w, ../assets/img/work/1440/vision-exterior.webp 1440w, ../assets/img/work/vision-exterior.webp 2048w" sizes="(max-width: 900px) 100vw, 66vw" width="2048" height="1298" alt="層疊樓板的美術館，倒映在陰天的水面上" fetchpriority="high"></div>
         <div class="fig__cap"><span class="mono">圖 01 — 設計</span><span class="mono">視界美術館 · 創辦人學術設計 · 設計模擬圖</span></div>
       </a>
       <span class="cover__x" aria-hidden="true">×</span>
       <a class="fig fig--env reveal" href="platform.html">
-        <div class="fig__img ratio-43 fig__img--logo"><img src="../assets/img/rsa/analyzer-logo.webp" width="1150" height="490" alt="Residential Site Analyzer 標誌：基地平面上的等角量體與橘色太陽軌跡，旁為 RSA 字樣與「住宅基地環境分析 Residential Site Analyzer」"></div>
+        <div class="fig__img ratio-43 fig__img--logo"><div class="pmark"><img src="../assets/img/rsa/analyzer-icon.webp" srcset="../assets/img/rsa/analyzer-icon.webp 450w" sizes="(max-width: 900px) 100vw, 75vw" width="450" height="470" alt=""><p class="pmark__name"><span>Residential<br>Site Analyzer</span><span class="pmark__zh" lang="zh-Hant">住宅基地環境分析</span><span class="pmark__by mono">by RSA.</span></p></div><span class="sr-only">Residential Site Analyzer 產品標誌：基地平面上的等角量體與橘色太陽軌跡</span></div>
         <div class="fig__cap"><span class="mono">圖 02 — 技術平台</span><span class="mono">住宅基地環境分析 · 產品標誌</span></div>
       </a>
     </div>
@@ -138,7 +139,7 @@
     <h2 id="exp-title" class="sr-only">專業領域</h2>
     <div class="chapter">
       <figure class="fig chapter__fig reveal">
-        <div class="fig__img ratio-43"><img src="../assets/img/work/corner-reading.webp" loading="lazy" alt="木格構閱讀架，人們坐在不同高度"></div>
+        <div class="fig__img ratio-43"><img src="../assets/img/work/960/corner-reading.webp" srcset="../assets/img/work/640/corner-reading.webp 640w, ../assets/img/work/960/corner-reading.webp 960w, ../assets/img/work/1440/corner-reading.webp 1440w, ../assets/img/work/corner-reading.webp 2048w" sizes="(max-width: 900px) 100vw, 66vw" width="2048" height="1298" loading="lazy" alt="木格構閱讀架，人們坐在不同高度"></div>
         <figcaption class="fig__cap"><span class="mono">角落圖書館 · 創辦人學術設計 · 設計模擬圖</span></figcaption>
       </figure>
       <div class="chapter__text reveal">
@@ -163,31 +164,31 @@
       <div class="viewer__stage">
         <div class="viewer__panel" role="tabpanel" id="panel-solar" aria-labelledby="tab-solar">
           <figure>
-            <div class="viewer__frame"><img src="../assets/img/rsa/solar-shading.webp" width="1850" height="1041" loading="lazy" alt="RSA 原型：目標建物與鄰棟的 3D 日照遮蔭畫面"></div>
+            <div class="viewer__frame"><img src="../assets/img/rsa/960/solar-shading.webp" srcset="../assets/img/rsa/640/solar-shading.webp 640w, ../assets/img/rsa/960/solar-shading.webp 960w, ../assets/img/rsa/1440/solar-shading.webp 1440w, ../assets/img/rsa/solar-shading.webp 1850w" sizes="(max-width: 900px) 100vw, 75vw" width="1850" height="1041" loading="lazy" alt="RSA 原型：目標建物與鄰棟的 3D 日照遮蔭畫面"></div>
             <figcaption class="fig__cap"><span class="mono">太陽位置與鄰棟遮蔽，依樓層與時間呈現</span><span class="stamp stamp--real">真實截圖 · 開發版本</span></figcaption>
           </figure>
         </div>
         <div class="viewer__panel" role="tabpanel" id="panel-site" aria-labelledby="tab-site" hidden>
           <figure>
-            <div class="viewer__frame"><img src="../assets/img/rsa/site-workspace.webp" width="1850" height="1041" loading="lazy" alt="RSA 原型：地圖上的基地定位與設定面板"></div>
+            <div class="viewer__frame"><img src="../assets/img/rsa/960/site-workspace.webp" srcset="../assets/img/rsa/640/site-workspace.webp 640w, ../assets/img/rsa/960/site-workspace.webp 960w, ../assets/img/rsa/1440/site-workspace.webp 1440w, ../assets/img/rsa/site-workspace.webp 1850w" sizes="(max-width: 900px) 100vw, 75vw" width="1850" height="1041" loading="lazy" alt="RSA 原型：地圖上的基地定位與設定面板"></div>
             <figcaption class="fig__cap"><span class="mono">基地範圍、周邊環境與分析條件</span><span class="stamp stamp--real">真實截圖 · 開發版本</span></figcaption>
           </figure>
         </div>
         <div class="viewer__panel" role="tabpanel" id="panel-massing" aria-labelledby="tab-massing" hidden>
           <figure>
-            <div class="viewer__frame"><img src="../assets/img/rsa/massing.webp" width="1850" height="1041" loading="lazy" alt="RSA 原型：地圖上的量體編輯，方案 A 以紅框標示"></div>
+            <div class="viewer__frame"><img src="../assets/img/rsa/960/massing.webp" srcset="../assets/img/rsa/640/massing.webp 640w, ../assets/img/rsa/960/massing.webp 960w, ../assets/img/rsa/1440/massing.webp 1440w, ../assets/img/rsa/massing.webp 1850w" sizes="(max-width: 900px) 100vw, 75vw" width="1850" height="1041" loading="lazy" alt="RSA 原型：地圖上的量體編輯，方案 A 以紅框標示"></div>
             <figcaption class="fig__cap"><span class="mono">方案 A 量體編輯 — A/B 方案共用同一基地模型</span><span class="stamp stamp--real">真實截圖 · 開發版本</span></figcaption>
           </figure>
         </div>
         <div class="viewer__panel" role="tabpanel" id="panel-wind" aria-labelledby="tab-wind" hidden>
           <figure>
-            <div class="viewer__frame"><img src="../assets/img/rsa/wind.webp" width="1850" height="1041" loading="lazy" alt="RSA 原型：流線通過建築群的 3D 風向畫面"></div>
+            <div class="viewer__frame"><img src="../assets/img/rsa/960/wind.webp" srcset="../assets/img/rsa/640/wind.webp 640w, ../assets/img/rsa/960/wind.webp 960w, ../assets/img/rsa/1440/wind.webp 1440w, ../assets/img/rsa/wind.webp 1850w" sizes="(max-width: 900px) 100vw, 75vw" width="1850" height="1041" loading="lazy" alt="RSA 原型：流線通過建築群的 3D 風向畫面"></div>
             <figcaption class="fig__cap"><span class="mono">背景風與量體關係 — 相對通風潛勢，非 CFD</span><span class="stamp stamp--explore">真實截圖 · 探索性質</span></figcaption>
           </figure>
         </div>
         <div class="viewer__panel" role="tabpanel" id="panel-utci" aria-labelledby="tab-utci" hidden>
           <figure>
-            <div class="viewer__frame"><img src="../assets/img/rsa/utci.webp" width="1850" height="1041" loading="lazy" alt="RSA 原型：UTCI 戶外熱環境研究畫面"></div>
+            <div class="viewer__frame"><img src="../assets/img/rsa/960/utci.webp" srcset="../assets/img/rsa/640/utci.webp 640w, ../assets/img/rsa/960/utci.webp 960w, ../assets/img/rsa/1440/utci.webp 1440w, ../assets/img/rsa/utci.webp 1850w" sizes="(max-width: 900px) 100vw, 75vw" width="1850" height="1041" loading="lazy" alt="RSA 原型：UTCI 戶外熱環境研究畫面"></div>
             <figcaption class="fig__cap"><span class="mono">依時間與位置呈現的戶外熱壓力（UTCI）</span><span class="stamp stamp--explore">真實截圖 · 探索性質</span></figcaption>
           </figure>
         </div>
@@ -225,27 +226,27 @@
     </div>
     <div class="mosaic">
       <a class="fig m1 reveal" href="project-vision.html">
-        <div class="fig__img ratio-43"><img src="../assets/img/work/960/vision-gallery.webp" loading="lazy" alt="視界美術館"></div>
+        <div class="fig__img ratio-43"><img src="../assets/img/work/960/vision-gallery.webp" srcset="../assets/img/work/640/vision-gallery.webp 640w, ../assets/img/work/960/vision-gallery.webp 960w, ../assets/img/work/1440/vision-gallery.webp 1440w, ../assets/img/work/vision-gallery.webp 2048w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 40vw" width="2048" height="1298" loading="lazy" alt="視界美術館"></div>
         <div class="work-cap"><span class="work-cap__no">W-01</span><span class="work-cap__title">視界美術館</span><span class="work-cap__arrow" aria-hidden="true">↗</span>
           <span class="work-cap__meta mono mono--sm"><span class="stamp stamp--work">個人學術設計</span>2021 · 畢業設計</span></div>
       </a>
       <a class="fig m2 reveal" href="project-corner.html">
-        <div class="fig__img ratio-34"><img src="../assets/img/work/960/corner-shelves.webp" loading="lazy" alt="角落圖書館"></div>
+        <div class="fig__img ratio-34"><img src="../assets/img/work/960/corner-shelves.webp" srcset="../assets/img/work/640/corner-shelves.webp 640w, ../assets/img/work/960/corner-shelves.webp 960w, ../assets/img/work/1440/corner-shelves.webp 1440w, ../assets/img/work/corner-shelves.webp 2048w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 40vw" width="2048" height="1298" loading="lazy" alt="角落圖書館"></div>
         <div class="work-cap"><span class="work-cap__no">W-02</span><span class="work-cap__title">角落圖書館</span><span class="work-cap__arrow" aria-hidden="true">↗</span>
           <span class="work-cap__meta mono mono--sm"><span class="stamp stamp--work">個人學術設計</span>2020</span></div>
       </a>
       <a class="fig m3 reveal" href="project-encounter.html">
-        <div class="fig__img ratio-34"><img src="../assets/img/work/960/encounter-front.webp" loading="lazy" alt="相癒"></div>
+        <div class="fig__img ratio-34"><img src="../assets/img/work/960/encounter-front.webp" srcset="../assets/img/work/640/encounter-front.webp 640w, ../assets/img/work/960/encounter-front.webp 960w, ../assets/img/work/encounter-front.webp 1200w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 40vw" width="1200" height="1600" loading="lazy" alt="相癒"></div>
         <div class="work-cap"><span class="work-cap__no">W-03</span><span class="work-cap__title">相癒</span><span class="work-cap__arrow" aria-hidden="true">↗</span>
           <span class="work-cap__meta mono mono--sm"><span class="stamp stamp--work">個人學術設計</span>2020 · TSID 競圖</span></div>
       </a>
       <a class="fig m4 reveal" href="project-futian.html">
-        <div class="fig__img ratio-32"><img src="../assets/img/work/960/futian-exterior.webp" loading="lazy" alt="福田案 · 七戶透天住宅"></div>
+        <div class="fig__img ratio-32"><img src="../assets/img/work/960/futian-exterior.webp" srcset="../assets/img/work/640/futian-exterior.webp 640w, ../assets/img/work/960/futian-exterior.webp 960w, ../assets/img/work/1440/futian-exterior.webp 1440w, ../assets/img/work/futian-exterior.webp 2048w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 40vw" width="2048" height="1300" loading="lazy" alt="福田案 · 七戶透天住宅"></div>
         <div class="work-cap"><span class="work-cap__no">W-04</span><span class="work-cap__title">福田案 · 七戶透天住宅</span><span class="work-cap__arrow" aria-hidden="true">↗</span>
           <span class="work-cap__meta mono mono--sm"><span class="stamp stamp--work">過往任職專案</span>2022–2025 · 專案負責</span></div>
       </a>
       <a class="fig m5 reveal" href="project-datong.html">
-        <div class="fig__img ratio-43"><img src="../assets/img/work/960/datong-exterior.webp" loading="lazy" alt="大同案 · 十五戶透天住宅"></div>
+        <div class="fig__img ratio-43"><img src="../assets/img/work/960/datong-exterior.webp" srcset="../assets/img/work/640/datong-exterior.webp 640w, ../assets/img/work/960/datong-exterior.webp 960w, ../assets/img/work/1440/datong-exterior.webp 1440w, ../assets/img/work/datong-exterior.webp 2048w" sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 40vw" width="2048" height="1298" loading="lazy" alt="大同案 · 十五戶透天住宅"></div>
         <div class="work-cap"><span class="work-cap__no">W-05</span><span class="work-cap__title">大同案 · 十五戶透天住宅</span><span class="work-cap__arrow" aria-hidden="true">↗</span>
           <span class="work-cap__meta mono mono--sm"><span class="stamp stamp--work">過往任職專案</span>2024– · 前期規劃</span></div>
       </a>
@@ -332,7 +333,7 @@
         <p class="muted" style="max-width:34em">RSA 見築科技：結合建築與空間設計、基地環境分析與自主軟體研發的建築環境科技品牌。</p>
         <p class="mono mono--sm"><a class="link" href="mailto:research@rsa-analyzer.com">research@rsa-analyzer.com</a></p>
       </div>
-      <div class="footer__col"><span class="mono mono--sm muted">探索</span><a href="work.html">作品</a><a href="platform.html">技術平台</a><a href="research.html">研究</a></div><div class="footer__col"><span class="mono mono--sm muted">RSA</span><a href="company.html">關於</a><a href="contact.html">聯絡</a><a href="privacy.html">隱私</a></div>
+      <div class="footer__col"><span class="mono mono--sm muted">探索</span><a href="work.html">作品</a><a href="expertise.html">專業領域</a><a href="platform.html">技術平台</a><a href="research.html">研究</a><a href="notes.html">研究日誌</a></div><div class="footer__col"><span class="mono mono--sm muted">RSA</span><a href="company.html">關於</a><a href="contact.html">聯絡</a><a href="privacy.html">隱私</a></div>
       <div class="footer__col"><span class="mono mono--sm muted">語言</span><a href="../index.html" lang="en">English</a><a href="index.html" lang="zh-Hant">繁體中文</a></div>
     </div>
     <div class="footer__mark" aria-hidden="true">RSA<i>.</i></div>
@@ -346,6 +347,6 @@
   </div>
 </footer>
 
-<script src="../assets/js/site.js" defer></script>
+<script src="../assets/js/site.js?v=dbecfb79" defer></script>
 </body>
 </html>
