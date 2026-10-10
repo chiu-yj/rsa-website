@@ -101,9 +101,18 @@ def jsonld(lang):
 def head(lang, fname, title, desc, img='assets/img/work/960/vision-exterior.webp'):
     P = pre(lang)
     hl = 'en' if lang == 'en' else 'zh-Hant'
-    fonts = 'family=Archivo:wdth,wght@62..125,300..900&amp;family=IBM+Plex+Mono:wght@400;500'
+    # Archivo and IBM Plex Mono are self-hosted (assets/fonts, see @font-face in site.css) and
+    # preloaded, so first paint no longer waits on a cross-origin Google Fonts stylesheet.
+    # Noto Sans TC stays on Google Fonts for /zh/ only: its unicode-range CJK slices are not
+    # practical to self-host.
+    fonts = f'''<link rel="preload" href="{P}assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{P}assets/fonts/ibm-plex-mono-regular.woff2" as="font" type="font/woff2" crossorigin>
+'''
     if lang == 'zh':
-        fonts += '&amp;family=Noto+Sans+TC:wght@400;500;700;900'
+        fonts += '''<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+'''
     return f'''<!doctype html>
 <html lang="{hl}">
 <head>
@@ -130,10 +139,7 @@ def head(lang, fname, title, desc, img='assets/img/work/960/vision-exterior.webp
 <link rel="icon" href="{P}favicon.svg" type="image/svg+xml">
 <link rel="icon" href="{P}favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="{P}apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?{fonts}&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{P}assets/css/site.css?v={ASSET_V}">
+{fonts}<link rel="stylesheet" href="{P}assets/css/site.css?v={ASSET_V}">
 {jsonld(lang) if fname == "index.html" else ""}</head>
 <body>
 <a class="skip" href="#main">{UI[lang]['skip']}</a>
