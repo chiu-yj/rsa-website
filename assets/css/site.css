@@ -4,6 +4,51 @@
    Palette: ink / greys / paper + one orange used as a redline, never as fill-for-decoration.
    ========================================================================== */
 
+/* ---------- Fonts (self-hosted, SIL OFL — see assets/fonts/OFL-*.txt) ----------
+   Latin subsets. Archivo keeps both variable axes: wdth 62–125, wght 400–900.
+   The two "Fallback" faces are local system fonts with adjusted metrics so text
+   occupies about the same space before and after Archivo arrives (no layout jump). */
+@font-face {
+  font-family: "Archivo";
+  src: url("../fonts/archivo-var.woff2") format("woff2");
+  font-weight: 400 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/ibm-plex-mono-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("../fonts/ibm-plex-mono-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/* Archivo at wdth 100 / wght 400, matched to Arial */
+@font-face {
+  font-family: "Archivo Fallback";
+  src: local("Arial"), local("ArialMT"), local("Helvetica"), local("Liberation Sans");
+  size-adjust: 98.6%;
+  ascent-override: 89%;
+  descent-override: 21.3%;
+  line-gap-override: 0%;
+}
+/* Condensed display type (wdth 62–70, heavy), matched to Arial Bold */
+@font-face {
+  font-family: "Archivo Condensed Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Helvetica Bold"), local("Helvetica-Bold"), local("Liberation Sans Bold");
+  size-adjust: 69.2%;
+  ascent-override: 126.8%;
+  descent-override: 30.3%;
+  line-gap-override: 0%;
+}
+
 :root {
   --ink: #111110;
   --ink-2: #1c1c1b;
@@ -18,7 +63,8 @@
   --orange-ink: #b8400f;  /* small orange text on paper, 4.9:1 */
   --dark-mute: #a3a29d;   /* muted text on ink, 7:1 */
 
-  --font-sans: "Archivo", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-sans: "Archivo", "Archivo Fallback", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --font-condensed: "Archivo", "Archivo Condensed Fallback", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
 
   --gutter: clamp(16px, 4vw, 48px);
@@ -87,6 +133,10 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   line-height: .84;
   letter-spacing: -.015em;
 }
+/* Condensed headings get a narrow fallback so wrapping doesn't change when Archivo loads */
+.display, .record__val, .letter__glyph, .contact__mail, .loop__en, .horizon__name, .rq__v,
+.tech__name, .value h3, .pmark__name > span:first-child, .aiflow__t { font-family: var(--font-condensed); }
+.rq__v span { font-family: var(--font-sans); }
 .d-xxl { font-size: clamp(42px, 11.2vw, 196px); }
 .d-xl  { font-size: clamp(38px, 7.6vw, 128px); }
 .d-l   { font-size: clamp(40px, 5.4vw, 88px); }
@@ -515,7 +565,7 @@ a.fig:hover .work-cap__arrow { transform: translate(3px, -3px); color: var(--ora
 .footer .link { color: var(--paper); }
 
 /* Traditional Chinese typography */
-:lang(zh-Hant) body, html:lang(zh-Hant) body { font-family: "Archivo", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; letter-spacing: .02em; }
+:lang(zh-Hant) body, html:lang(zh-Hant) body { font-family: "Archivo", "Archivo Fallback", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; letter-spacing: .02em; }
 html:lang(zh-Hant) .display { font-weight: 900; line-height: 1.08; letter-spacing: .01em; text-transform: none; }
 html:lang(zh-Hant) .d-xxl { font-size: clamp(48px, 10vw, 176px); line-height: 1.04; }
 html:lang(zh-Hant) .d-xl { font-size: clamp(40px, 6.4vw, 108px); }
