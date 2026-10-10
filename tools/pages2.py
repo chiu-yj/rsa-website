@@ -268,7 +268,7 @@ AB = {
           ('Integrity', '誠信', 'Never invent validation, results, clients or team size.')],
   s4=('04', 'Founder', 'Chiu Yu-Jyun · 邱禹鈞'),
   founder_h='From spatial design and residential practice to environmental research.',
-  founder=['Trained in spatial design at Da-Yeh University and Kun Shan University. Years in residential development: land assessment, early planning, design integration, construction coordination, project management and handover.',
+  founder=['Trained in spatial design at Da-Yeh University and Kun Shan University. Since 2021, special assistant at a construction company, leading residential developments: land assessment, early planning, design integration, construction coordination, project management and handover.',
            'Currently studying in the Department of Architecture at National University of Kaohsiung, where the Residential Site Analyzer research continues. Also works in photography and visual storytelling about light, scale and use.'],
   timeline=[('2017 — 2021', 'Spatial design studies', 'Da-Yeh University (2017–18); Kun Shan University, B.Des. Spatial Design (2018–21)'),
             ('2021 —', 'Residential development', 'Special assistant at a construction company, leading residential development projects from planning to handover'),
