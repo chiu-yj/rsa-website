@@ -89,7 +89,7 @@ def jsonld(lang):
              "alternateName": ["Responsive Space Architecture", "見築科技有限公司", "RSA 見築科技"],
              "url": SITE['domain'] + "/", "logo": SITE['domain'] + "/apple-touch-icon.png", "email": SITE['email'],
              "description": "Architecture and environmental-technology brand from Taiwan connecting spatial design, site analysis and its own software research.",
-             "founder": {"@type": "Person", "name": "Chiu Yu-Jyun", "alternateName": "邱禹鈞"},
+             "founder": {"@type": "Person", "name": "Chiu Yu-Jyun", "alternateName": "邱禹鈞", "sameAs": ["https://www.linkedin.com/in/yu-jyun-chiu-101128184/"]},
              "areaServed": "TW"},
             {"@type": "WebSite", "@id": SITE['domain'] + "/#website", "url": SITE['domain'] + "/", "name": "RSA · Responsive Space Architecture",
              "inLanguage": ["en", "zh-Hant"], "publisher": {"@id": SITE['domain'] + "/#org"}},

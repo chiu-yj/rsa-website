@@ -273,6 +273,7 @@ AB = {
   timeline=[('2017 — 2021', 'Spatial design studies', 'Da-Yeh University; Kun Shan University, Dept. of Spatial Design'),
             ('2020 — 2026', 'Residential development', 'Project assistant, then project manager in a construction and development group'),
             ('2026 —', 'Graduate study &amp; RSA', 'National University of Kaohsiung, Dept. of Architecture; Residential Site Analyzer research')],
+  founder_link=('https://www.linkedin.com/in/yu-jyun-chiu-101128184/', 'Yu-Jyun Chiu on LinkedIn'),
   founder_note='Academic background is personal. It does not mean any university owns, endorses or partners with RSA.',
   s5=('05', 'Where RSA stands today', 'Status'),
   status=[('real', 'Is', ['An independent brand from Taiwan, led by its founder', 'A working research prototype (Residential Site Analyzer)', 'A research programme with stated questions and validation plans']),
@@ -313,6 +314,7 @@ AB = {
   timeline=[('2017 — 2021', '空間設計學習', '大葉大學；崑山科技大學 空間設計系'),
             ('2020 — 2026', '住宅開發實務', '營造與建設集團 · 特助、專案經理人'),
             ('2026 —', '研究所與 RSA', '國立高雄大學 建築學系研究所；Residential Site Analyzer 研究')],
+  founder_link=('https://www.linkedin.com/in/yu-jyun-chiu-101128184/', '邱禹鈞 · LinkedIn'),
   founder_note='學術背景屬創辦人個人經歷，不代表任何大學擁有、背書或與 RSA 正式合作。',
   s5=('05', 'RSA 目前的狀態', '現況'),
   status=[('real', '是', ['由創辦人主導、來自台灣的獨立品牌', '一個真實運作的研究原型（Residential Site Analyzer）', '一個有明確研究問題與驗證計畫的研究']),
@@ -368,6 +370,7 @@ def about(lang):
       <div class="span-5 body muted" style="display:flex;flex-direction:column;gap:14px">{''.join(f'<p>{x}</p>' for x in d['founder'])}</div>
     </div>
     <div class="ledger">{tl}</div>
+    <p style="margin-top:20px"><a class="link" href="{d['founder_link'][0]}" rel="me noopener" target="_blank">{d['founder_link'][1]} <span aria-hidden="true">↗</span></a></p>
     <p class="mono mono--sm muted" style="margin-top:16px">{d['founder_note']}</p>
   </div>
 </section>
@@ -598,7 +601,7 @@ def contact(lang):
 <section class="section">
   <div class="wrap">
     <a class="contact__mail" href="mailto:{SITE['email']}">{SITE['email']}</a>
-    <p style="margin-top:24px"><button class="btn btn--ghost" type="button" data-copy="{SITE['email']}" data-done="{d['copied']}">{d['copy']}</button></p>
+    <p style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn--ghost" href="https://www.linkedin.com/in/yu-jyun-chiu-101128184/" rel="me noopener" target="_blank">LinkedIn ↗</a><button class="btn btn--ghost" type="button" data-copy="{SITE['email']}" data-done="{d['copied']}">{d['copy']}</button></p>
   </div>
 </section>
 <section class="section" style="padding-top:0">
