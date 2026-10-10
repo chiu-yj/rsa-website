@@ -89,7 +89,7 @@ def jsonld(lang):
              "alternateName": ["Responsive Space Architecture", "見築科技有限公司", "RSA 見築科技"],
              "url": SITE['domain'] + "/", "logo": SITE['domain'] + "/apple-touch-icon.png", "email": SITE['email'],
              "description": "Architecture and environmental-technology brand from Taiwan connecting spatial design, site analysis and its own software research.",
-             "founder": {"@type": "Person", "name": "Chiu Yu-Jyun", "alternateName": "邱禹鈞"},
+             "founder": {"@type": "Person", "name": "Chiu Yu-Jyun", "alternateName": "邱禹鈞", "sameAs": ["https://www.linkedin.com/in/yu-jyun-chiu-101128184/"]},
              "areaServed": "TW"},
             {"@type": "WebSite", "@id": SITE['domain'] + "/#website", "url": SITE['domain'] + "/", "name": "RSA · Responsive Space Architecture",
              "inLanguage": ["en", "zh-Hant"], "publisher": {"@id": SITE['domain'] + "/#org"}},
@@ -399,7 +399,7 @@ MOSAIC = [  # (slug, img in 960/, ratio, css class, meta-en, meta-zh)
     ('corner', 'corner-shelves', 'ratio-34', 'm2', '2020', '2020'),
     ('encounter', 'encounter-front', 'ratio-34', 'm3', '2020 · TSID entry', '2020 · TSID 競圖'),
     ('futian', 'futian-exterior', 'ratio-32', 'm4', '2022–2025 · Project lead', '2022–2025 · 專案負責'),
-    ('datong', 'datong-exterior', 'ratio-43', 'm5', '2024– · Early planning', '2024– · 前期規劃'),
+    ('datong', 'datong-exterior', 'ratio-43', 'm5', '2024–2025 · Early planning', '2024–2025 · 前期規劃'),
 ]
 
 

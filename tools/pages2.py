@@ -268,11 +268,12 @@ AB = {
           ('Integrity', '誠信', 'Never invent validation, results, clients or team size.')],
   s4=('04', 'Founder', 'Chiu Yu-Jyun · 邱禹鈞'),
   founder_h='From spatial design and residential practice to environmental research.',
-  founder=['Trained in spatial design at Da-Yeh University and Kun Shan University. Years in residential development: land assessment, early planning, design integration, construction coordination, project management and handover.',
+  founder=['Trained in spatial design at Da-Yeh University and Kun Shan University. From 2021 to 2025 in residential development—special assistant at a construction and development group, then project manager at a residential developer—covering land assessment, early planning, design integration, construction coordination and handover.',
            'Currently studying in the Department of Architecture at National University of Kaohsiung, where the Residential Site Analyzer research continues. Also works in photography and visual storytelling about light, scale and use.'],
-  timeline=[('2017 — 2021', 'Spatial design studies', 'Da-Yeh University; Kun Shan University, Dept. of Spatial Design'),
-            ('2020 — 2026', 'Residential development', 'Project assistant, then project manager in a construction and development group'),
-            ('2026 —', 'Graduate study &amp; RSA', 'National University of Kaohsiung, Dept. of Architecture; Residential Site Analyzer research')],
+  timeline=[('2017 — 2021', 'Spatial design studies', 'Da-Yeh University (2017–18); Kun Shan University, B.Des. Spatial Design (2018–21)'),
+            ('2021 — 2025', 'Residential development', 'Special assistant, construction and development group (2021–22); project manager, residential developer (2022–25)'),
+            ('2026 —', 'Graduate study &amp; RSA', 'Master’s in Architecture, National University of Kaohsiung; founded RSA (Aug 2026)')],
+  founder_link=('https://www.linkedin.com/in/yu-jyun-chiu-101128184/', 'Yu-Jyun Chiu on LinkedIn'),
   founder_note='Academic background is personal. It does not mean any university owns, endorses or partners with RSA.',
   s5=('05', 'Where RSA stands today', 'Status'),
   status=[('real', 'Is', ['An independent brand from Taiwan, led by its founder', 'A working research prototype (Residential Site Analyzer)', 'A research programme with stated questions and validation plans']),
@@ -308,11 +309,12 @@ AB = {
           ('誠信', 'Integrity', '不偽造驗證、成果、客戶與團隊規模。')],
   s4=('04', '創辦人', '邱禹鈞 · Chiu Yu-Jyun'),
   founder_h='從空間設計與住宅實務，走向環境研究。',
-  founder=['曾於大葉大學、崑山科技大學接受空間設計訓練；長期投入住宅開發，經歷土地評估、前期規劃、設計整合、營造協調、專案管理到交屋。',
+  founder=['曾於大葉大學、崑山科技大學接受空間設計訓練；2021 至 2025 年投入住宅開發：先於營造建設集團擔任特別助理，後於建設公司擔任專案經理人，經歷土地評估、前期規劃、設計整合、營造協調到交屋。',
            '目前就讀國立高雄大學建築學系研究所，並持續 Residential Site Analyzer 的研究。也以攝影與影像敘事觀察光線、尺度與使用痕跡。'],
-  timeline=[('2017 — 2021', '空間設計學習', '大葉大學；崑山科技大學 空間設計系'),
-            ('2020 — 2026', '住宅開發實務', '營造與建設集團 · 特助、專案經理人'),
-            ('2026 —', '研究所與 RSA', '國立高雄大學 建築學系研究所；Residential Site Analyzer 研究')],
+  timeline=[('2017 — 2021', '空間設計學習', '大葉大學（2017–18）；崑山科技大學 空間設計系 設計學士（2018–21）'),
+            ('2021 — 2025', '住宅開發實務', '營造建設集團 特別助理（2021–22）；建設公司 專案經理人（2022–25）'),
+            ('2026 —', '研究所與 RSA', '國立高雄大學 建築碩士班；創立 RSA（2026 年 8 月）')],
+  founder_link=('https://www.linkedin.com/in/yu-jyun-chiu-101128184/', '邱禹鈞 · LinkedIn'),
   founder_note='學術背景屬創辦人個人經歷，不代表任何大學擁有、背書或與 RSA 正式合作。',
   s5=('05', 'RSA 目前的狀態', '現況'),
   status=[('real', '是', ['由創辦人主導、來自台灣的獨立品牌', '一個真實運作的研究原型（Residential Site Analyzer）', '一個有明確研究問題與驗證計畫的研究']),
@@ -368,6 +370,7 @@ def about(lang):
       <div class="span-5 body muted" style="display:flex;flex-direction:column;gap:14px">{''.join(f'<p>{x}</p>' for x in d['founder'])}</div>
     </div>
     <div class="ledger">{tl}</div>
+    <p style="margin-top:20px"><a class="link" href="{d['founder_link'][0]}" rel="me noopener" target="_blank">{d['founder_link'][1]} <span aria-hidden="true">↗</span></a></p>
     <p class="mono mono--sm muted" style="margin-top:16px">{d['founder_note']}</p>
   </div>
 </section>
@@ -598,7 +601,7 @@ def contact(lang):
 <section class="section">
   <div class="wrap">
     <a class="contact__mail" href="mailto:{SITE['email']}">{SITE['email']}</a>
-    <p style="margin-top:24px"><button class="btn btn--ghost" type="button" data-copy="{SITE['email']}" data-done="{d['copied']}">{d['copy']}</button></p>
+    <p style="margin-top:24px;display:flex;flex-wrap:wrap;gap:12px"><a class="btn btn--ghost" href="https://www.linkedin.com/in/yu-jyun-chiu-101128184/" rel="me noopener" target="_blank">LinkedIn ↗</a><button class="btn btn--ghost" type="button" data-copy="{SITE['email']}" data-done="{d['copied']}">{d['copy']}</button></p>
   </div>
 </section>
 <section class="section" style="padding-top:0">
